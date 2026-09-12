@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="void" data-mode="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>anyexam-prepkit — ユーザーガイド</title>
+  <meta name="description" content="試験対策アプリ anyexam-prepkit を使って勉強する人のためのユーザーガイド。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <header class="page-header">
+    <div class="brand">
+      <a href="./index.html">
+        <span class="logo">AP</span>
+        <span>anyexam-prepkit</span>
+      </a>
+      <span class="badge">User Guide</span>
+      <span class="page-title">ホーム</span>
+    </div>
+    <nav class="header-nav">
+      <a href="https://github.com/Kumapapa2012/anyexam-prepkit" target="_blank" rel="noopener">GitHub</a>
+      <button class="mode-btn" data-mode-toggle type="button">☀ Light</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">このページ</p>
+        <ul class="sidebar-list" id="toc-index">
+          <li><a href="#about"><span class="sn">—</span>このガイドについて</a></li>
+          <li><a href="#chapters"><span class="sn">—</span>章構成</a></li>
+          <li><a href="#note"><span class="sn">—</span>画面写真について</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">各章へ</p>
+        <div class="sidebar-chapters">
+          <a href="./01_what_you_can_do.html"><span class="cn">01</span>このアプリでできること</a>
+        </div>
+      </div>
+    </aside>
+
+    <article class="content">
+
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero">
+          <div class="hero-eyebrow">User Guide</div>
+          <h1>anyexam-prepkit<br>ユーザーガイド</h1>
+          <p class="lead">試験の練習問題をスマホで繰り返し解くための練習アプリ、その使い方の案内です。アプリを開くところから、成績の読み方、毎日の練習の組み立て方までをひと通り扱います。</p>
+          <div class="callout callout-note">
+            <span class="callout-icon">💡</span>
+            <div class="callout-body">
+              <span class="callout-title">まずはここから</span>
+              <p>どんなアプリなのかを画面写真つきで知りたい方は <strong><a href="./01_what_you_can_do.html">01. このアプリでできること</a></strong> へ。すでに使い始めている方は、必要な章に直接飛んでください。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>このガイドについて</h2>
+        <p>このガイドは<strong>アプリを使って勉強する人</strong>に向けて書かれています。問題を解き、間違いを潰し、成績の伸びを確かめる——その一連の流れを迷わず回せるようになることがゴールです。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">アプリを用意する側の方へ</span>
+            <p>自分の試験用に問題を差し替えたい、サーバーに立てて複数人で使いたい、といった話は
+            <a href="https://github.com/Kumapapa2012/anyexam-prepkit/wiki" target="_blank" rel="noopener">開発者向け Wiki</a>
+            にまとまっています。カートリッジの作り方・ビルド・デプロイ・運用はそちらを参照してください。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHAPTERS -->
+      <section id="chapters">
+        <h2>章構成</h2>
+        <div class="chapter-grid">
+          <a class="chapter-card" href="./01_what_you_can_do.html">
+            <span class="card-arrow">→</span>
+            <span class="cn">Chapter 01</span>
+            <h3>このアプリでできること</h3>
+            <p>画面写真つきの機能ひとめぐり。出題の選び方、間違いの潰し方、成績の見方まで。</p>
+          </a>
+          <div class="chapter-card is-todo">
+            <span class="cn">Chapter 02</span>
+            <h3>ユーザーの登録</h3>
+            <p>登録の手順と、ユーザーごとに保存されるデータ・進行度の確認方法。</p>
+            <span class="todo-tag">準備中</span>
+          </div>
+          <div class="chapter-card is-todo">
+            <span class="cn">Chapter 03</span>
+            <h3>学習の開始</h3>
+            <p>アプリを開いてから試験を始め、成績を見るまでの通し手順。途中でやめる方法も。</p>
+            <span class="todo-tag">準備中</span>
+          </div>
+          <div class="chapter-card is-todo">
+            <span class="cn">Chapter 04</span>
+            <h3>おすすめの学習方法</h3>
+            <p>試験日から逆算した練習の組み立て方と、成績リセットの使いどころ。</p>
+            <span class="todo-tag">準備中</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTE -->
+      <section id="note">
+        <h2>画面写真について</h2>
+        <p>このガイドに載っている画面写真は、すべて同梱の<strong>サンプル試験</strong>（全 60 問）のものです。</p>
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">数字は試験ごとに違います</span>
+            <p>問題数・1 セッションの問題数・本番モードの制限時間・合格ラインは、あなたが使う試験の設定によって変わります。数字そのものではなく、画面の使い方として読んでください。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pager">
+        <span></span>
+        <a class="next" href="./01_what_you_can_do.html">
+          <span class="pager-label">Next</span>
+          <span class="pager-title">01. このアプリでできること →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+</body>
+</html>

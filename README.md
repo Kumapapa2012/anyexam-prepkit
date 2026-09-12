@@ -63,9 +63,10 @@ docker compose up -d --build      # http://<HOST>:8000/
 
 ## ドキュメント
 
-アプリを使って勉強する人向けの案内は [ユーザーガイド](docs/user-guide/README.md) にある。
-まずは [このアプリでできること](docs/user-guide/what-you-can-do.md) を見ると、画面写真つきで
-何ができるか分かる。
+アプリを使って勉強する人向けの案内は
+📖 **[ユーザーガイド](https://kumapapa2012.github.io/anyexam-prepkit/user_guide/)** にある。
+まずは [このアプリでできること](https://kumapapa2012.github.io/anyexam-prepkit/user_guide/01_what_you_can_do.html)
+を見ると、画面写真つきで何ができるか分かる。
 
 カートリッジ作成・デプロイなど、作る側・運用する側の詳細はすべて
 [Wiki](https://github.com/Kumapapa2012/anyexam-prepkit/wiki) にまとめてある。
