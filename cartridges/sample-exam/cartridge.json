@@ -1,0 +1,27 @@
+{
+  "id": "sample-exam",
+  "app": {
+    "title": "サンプル試験",
+    "headingHtml": "サンプル<br/>試験",
+    "subtitle": "このフレームワークでできることの見本",
+    "shortName": "サンプル",
+    "description": "単一選択・複数選択・画像・音声動画をひととおり収めたサンプル試験",
+    "lang": "ja",
+    "themeColor": "#58cc02",
+    "backgroundColor": "#ffffff"
+  },
+  "exam": { "passRate": 0.6, "questionCount": 30, "timeLimitSec": 3600 },
+  "session": { "normalLength": 10 },
+  "sections": {
+    "single": { "name": "単一選択問題", "ratio": 0.3333 },
+    "multi": { "name": "複数選択問題", "ratio": 0.3333 },
+    "image": { "name": "画像問題", "ratio": 0.1667 },
+    "av": { "name": "音声動画問題", "ratio": 0.1667 }
+  },
+  "build": {
+    "sources": "data/q-*.json",
+    "assets": "assets",
+    "fallbackSection": "single",
+    "keywords": {}
+  }
+}

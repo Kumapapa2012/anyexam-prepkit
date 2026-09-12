@@ -1,0 +1,8 @@
+cartridges/*/data/raw
+cartridges/*/dist
+core/server/data
+memory
+*.har
+**/__pycache__
+README.md
+.git

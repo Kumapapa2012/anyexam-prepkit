@@ -1,0 +1,157 @@
+{
+  "title": "音声動画問題",
+  "questions": [
+    {
+      "id": 4001,
+      "type": "single",
+      "section": "av",
+      "question": "Watch the news clip. What did Marimo-chan take?",
+      "media": [{ "kind": "video", "src": "assets/news.mp4", "poster": "assets/news-poster.jpg", "alt": "猫耳の女の子が焼き魚を盗んだと伝える架空のニュース映像" }],
+      "choices": [
+        { "key": "a", "text": "A bowl of rice" },
+        { "key": "b", "text": "Her papa's grilled fish" },
+        { "key": "c", "text": "A cup of soup" },
+        { "key": "d", "text": "A piece of cake" }
+      ],
+      "correct": ["b"],
+      "explanation": "ナレーションは「has stolen her papa's grilled fish from the dinner table」と伝えています。画面の指名手配ポスターにも「For Stealing Papa's Fish」と出ています。"
+    },
+    {
+      "id": 4002,
+      "type": "single",
+      "section": "av",
+      "question": "Watch the news clip. What is the victim's statement at the end?",
+      "media": [{ "kind": "video", "src": "assets/news.mp4", "poster": "assets/news-poster.jpg", "alt": "架空のニュース映像。最後に被害者のコメントが流れる" }],
+      "choices": [
+        { "key": "a", "text": "He wants her to be arrested immediately." },
+        { "key": "b", "text": "He says he will cook another fish." },
+        { "key": "c", "text": "He says she is so cute that he forgives her." },
+        { "key": "d", "text": "He refuses to comment." }
+      ],
+      "correct": ["c"],
+      "explanation": "被害者のコメントは「But she's so cute… I forgive her.（でもこんなに可愛いから…許すよ）」です。"
+    },
+    {
+      "id": 4003,
+      "type": "multi",
+      "section": "av",
+      "question": "Watch the news clip. Which statements are true according to the report? Choose two.",
+      "media": [{ "kind": "video", "src": "assets/news.mp4", "poster": "assets/news-poster.jpg", "alt": "架空のニュース映像" }],
+      "choices": [
+        { "key": "a", "text": "Marimo-chan has already been caught." },
+        { "key": "b", "text": "Marimo-chan is still at large." },
+        { "key": "c", "text": "The fish was taken from the dinner table." },
+        { "key": "d", "text": "The incident happened at a restaurant." }
+      ],
+      "correct": ["b", "c"],
+      "explanation": "「She remains at large and is currently being pursued.」より、まだ捕まっておらず追跡中です。また「from the dinner table」とあり、場所は家庭の食卓です。レストランという言及はありません。"
+    },
+    {
+      "id": 4004,
+      "type": "single",
+      "section": "av",
+      "question": "Listen to the conversation. What does Tom still need?",
+      "media": [{ "kind": "audio", "src": "assets/conv-office.mp3", "alt": "アンナとトムが売上レポートについて話す会話" }],
+      "choices": [
+        { "key": "a", "text": "The figures from the Osaka branch" },
+        { "key": "b", "text": "A new computer" },
+        { "key": "c", "text": "Anna's signature" },
+        { "key": "d", "text": "The meeting room key" }
+      ],
+      "correct": ["a"],
+      "explanation": "トムは「I still need the figures from the Osaka branch.」と言っています。"
+    },
+    {
+      "id": 4005,
+      "type": "single",
+      "section": "av",
+      "question": "Listen to the conversation again. By when does Anna need the report?",
+      "media": [{ "kind": "audio", "src": "assets/conv-office.mp3", "alt": "アンナとトムが締め切りについて話す会話" }],
+      "choices": [
+        { "key": "a", "text": "Tuesday morning" },
+        { "key": "b", "text": "Wednesday evening" },
+        { "key": "c", "text": "Thursday morning" },
+        { "key": "d", "text": "Friday evening" }
+      ],
+      "correct": ["b"],
+      "explanation": "アンナは「The meeting is on Thursday, so we need it by Wednesday evening.」と言っています。会議が木曜であることと締め切りを混同しないよう注意します。"
+    },
+    {
+      "id": 4006,
+      "type": "single",
+      "section": "av",
+      "question": "Listen to the conversation. What time will they leave?",
+      "media": [{ "kind": "audio", "src": "assets/conv-travel.mp3", "alt": "週末の山行きについて2人が話す会話" }],
+      "choices": [
+        { "key": "a", "text": "At five" },
+        { "key": "b", "text": "At six" },
+        { "key": "c", "text": "At seven" },
+        { "key": "d", "text": "At eight" }
+      ],
+      "correct": ["b"],
+      "explanation": "最後に「Let us leave at six so we can arrive before the sunrise.」と言っています。"
+    },
+    {
+      "id": 4007,
+      "type": "multi",
+      "section": "av",
+      "question": "Listen to the conversation again. Which items will they bring? Choose three.",
+      "media": [{ "kind": "audio", "src": "assets/conv-travel.mp3", "alt": "持ち物について話す会話" }],
+      "choices": [
+        { "key": "a", "text": "A heavy jacket" },
+        { "key": "b", "text": "A thermos" },
+        { "key": "c", "text": "A tent" },
+        { "key": "d", "text": "Sandwiches" },
+        { "key": "e", "text": "A camera" }
+      ],
+      "correct": ["a", "b", "d"],
+      "explanation": "男性が「I will bring my heavy jacket and the thermos.」、女性が「I will pack the map and some sandwiches.」と言っています。テントとカメラへの言及はありません。"
+    },
+    {
+      "id": 4008,
+      "type": "single",
+      "section": "av",
+      "question": "Listen to the station announcement. Which platform should passengers go to?",
+      "media": [{ "kind": "audio", "src": "assets/ann-train.mp3", "alt": "仙台行き特急の発車ホーム変更を伝える駅のアナウンス" }],
+      "choices": [
+        { "key": "a", "text": "Platform three" },
+        { "key": "b", "text": "Platform four" },
+        { "key": "c", "text": "Platform five" },
+        { "key": "d", "text": "Platform nine" }
+      ],
+      "correct": ["c"],
+      "explanation": "「will depart from platform five, not platform three」「please move to platform five」と案内しています。最初に聞こえる「nine forty」は発車時刻（9時40分）で、ホーム番号ではありません。"
+    },
+    {
+      "id": 4009,
+      "type": "single",
+      "section": "av",
+      "question": "Listen to the store announcement. What time does the bakery close?",
+      "media": [{ "kind": "audio", "src": "assets/ann-store.mp3", "alt": "閉店時刻を伝える店内アナウンス" }],
+      "choices": [
+        { "key": "a", "text": "7:00 p.m." },
+        { "key": "b", "text": "7:30 p.m." },
+        { "key": "c", "text": "8:00 p.m." },
+        { "key": "d", "text": "8:30 p.m." }
+      ],
+      "correct": ["b"],
+      "explanation": "店全体は 8:00 p.m. に閉まりますが、1階のベーカリーは「thirty minutes earlier（30分早く）」なので 7:30 p.m. です。"
+    },
+    {
+      "id": 4010,
+      "type": "multi",
+      "section": "av",
+      "question": "Listen to the weekly forecast. On which days will it rain? Choose two.",
+      "media": [{ "kind": "audio", "src": "assets/weather.mp3", "alt": "月曜から金曜までの週間天気予報" }],
+      "choices": [
+        { "key": "a", "text": "Monday" },
+        { "key": "b", "text": "Tuesday" },
+        { "key": "c", "text": "Wednesday" },
+        { "key": "d", "text": "Thursday" },
+        { "key": "e", "text": "Friday" }
+      ],
+      "correct": ["b", "d"],
+      "explanation": "火曜は「rain in the afternoon」、木曜は「heavy rain and strong wind」です。水曜は cloudy（曇り）で雨とは言っていません。月曜は sunny、金曜は clear です。"
+    }
+  ]
+}

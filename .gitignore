@@ -1,0 +1,12 @@
+# SQLite 成績データ（実行環境ごとに生成される）
+core/server/data/
+*.db
+*.db-shm
+*.db-wal
+
+# カートリッジのビルド成果物（build_cartridge.py で再生成できる）
+cartridges/*/dist/
+
+__pycache__/
+*.pyc
+.DS_Store

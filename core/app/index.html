@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#58cc02" />
+  <title>学習アプリ</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ロード演出 -->
+  <div id="loader" class="loader">
+    <div class="loader-mascot" id="loaderMascot"></div>
+    <div class="loader-bar"><span></span></div>
+    <p id="loaderMsg">問題を読み込み中…</p>
+  </div>
+
+  <div id="app" class="app hidden">
+    <!-- ===== ホーム / 認証 ===== -->
+    <section id="screen-home" class="screen">
+      <div class="home-hero">
+        <div class="mascot mascot-idle" id="homeMascot"></div>
+        <h1 id="appHeading"></h1>
+        <p class="subtitle" id="appSubtitle"></p>
+      </div>
+
+      <!-- 未ログイン時 -->
+      <div id="authPanel">
+        <div class="auth-tabs" id="authTabs">
+          <button id="tabLogin" class="auth-tab selected" data-authmode="login">ログイン</button>
+          <button id="tabRegister" class="auth-tab" data-authmode="register">新規登録</button>
+        </div>
+        <div class="card">
+          <input id="authUser" class="input" type="text" placeholder="ニックネーム（ユーザー名）" maxlength="24" autocomplete="username" aria-label="ユーザー名" />
+          <input id="authPass" class="input" type="password" placeholder="パスワード" autocomplete="current-password" aria-label="パスワード" />
+          <input id="authCode" class="input hidden" type="text" placeholder="招待コード（新規登録時）" aria-label="招待コード" />
+          <button id="authSubmit" class="btn btn-primary btn-block">ログイン</button>
+          <p id="authNote" class="auth-note hidden">お試し用のアカウントを自動で作成します。成績は毎回まっさらな状態から始まり、ブラウザを閉じると引き継がれません。</p>
+          <p id="authError" class="auth-error"></p>
+        </div>
+      </div>
+
+      <!-- ログイン時 -->
+      <div id="userPanel" class="hidden">
+        <div class="lang-row"><button id="langToggleHome" class="lang-toggle"></button></div>
+        <p class="greet">こんにちは、<b id="userName"></b> さん</p>
+        <p id="streakBadge" class="streak-badge hidden"></p>
+        <button id="goSetupBtn" class="btn btn-primary btn-block">学習をはじめる</button>
+        <button id="goStatsBtn" class="btn btn-ghost btn-block">成績を見る</button>
+        <button id="logoutBtn" class="btn btn-ghost btn-block">ログアウト</button>
+      </div>
+
+      <p class="bank-info" id="bankInfo"></p>
+    </section>
+
+    <!-- ===== モード選択 ===== -->
+    <section id="screen-setup" class="screen hidden">
+      <header class="topbar">
+        <button class="icon-btn" data-nav="home">‹</button>
+        <span class="topbar-title">モード選択</span>
+        <span class="topbar-user" id="setupUser"></span>
+      </header>
+
+      <h2 class="section-h">出題タイプ</h2>
+      <div class="option-list" id="modeList">
+        <button class="option" data-mode="random">
+          <span class="option-emoji">🎲</span>
+          <span class="option-body"><b>ランダム</b><small>全問からランダムに出題</small></span>
+        </button>
+        <button class="option" data-mode="ratio">
+          <span class="option-emoji">⚖️</span>
+          <span class="option-body"><b>本番比率</b><small>試験のセクション比率で出題</small></span>
+        </button>
+        <button class="option" data-mode="weak">
+          <span class="option-emoji">🎯</span>
+          <span class="option-body"><b>間違え優先</b><small>苦手・未挑戦の問題を優先</small></span>
+        </button>
+      </div>
+
+      <h2 class="section-h">セッション</h2>
+      <div class="option-list" id="lengthList">
+        <button class="option" id="optNormal" data-length="">
+          <span class="option-emoji">⏱️</span>
+          <span class="option-body"><b id="optNormalLabel"></b><small>スキマ時間で 5〜10分</small></span>
+        </button>
+        <button class="option" data-length="exam">
+          <span class="option-emoji">📝</span>
+          <span class="option-body"><b id="optExamLabel"></b><small>本試験と同じ問題数・制限時間</small></span>
+        </button>
+      </div>
+
+      <button id="startQuizBtn" class="btn btn-primary btn-block" disabled>スタート</button>
+    </section>
+
+    <!-- ===== クイズ ===== -->
+    <section id="screen-quiz" class="screen hidden">
+      <header class="quiz-head">
+        <button class="icon-btn" id="quitBtn">✕</button>
+        <div class="progress"><span id="progressFill"></span></div>
+        <div class="quiz-timer hidden" id="quizTimer">--:--</div>
+        <button id="langToggleQuiz" class="lang-toggle"></button>
+      </header>
+
+      <div class="quiz-body">
+        <div class="q-meta"><span id="qSection" class="chip"></span><span id="qIndex" class="q-index"></span>
+          <label class="review-flag hidden" id="reviewFlagWrap"><input type="checkbox" id="reviewFlagCheck"> 見直し</label>
+        </div>
+        <div class="q-text" id="questionText"></div>
+        <div class="media-box hidden" id="questionMedia"></div>
+        <p class="multi-hint hidden" id="multiHint">複数選択：当てはまるものをすべて選んでください</p>
+        <div class="choices" id="choices"></div>
+      </div>
+
+      <!-- フィードバック（通常モード） -->
+      <div class="feedback hidden" id="feedback">
+        <div class="feedback-inner">
+          <div class="feedback-mascot" id="fbMascot"></div>
+          <div class="feedback-head" id="fbHead"></div>
+          <button class="feedback-toggle" id="explToggle">解説を見る ▾</button>
+          <div class="feedback-expl hidden" id="fbExpl"></div>
+          <div class="media-box hidden" id="fbMedia"></div>
+          <button id="nextBtnFb" class="btn btn-primary btn-block fb-next hidden">次へ</button>
+        </div>
+      </div>
+
+      <footer class="quiz-foot">
+        <button id="backToListBtn" class="btn btn-block hidden">一覧に戻る</button>
+        <button id="checkBtn" class="btn btn-primary btn-block" disabled>回答する</button>
+        <button id="nextBtn" class="btn btn-block hidden">次へ</button>
+      </footer>
+    </section>
+
+    <!-- ===== 本番：解答一覧 ===== -->
+    <section id="screen-examlist" class="screen hidden">
+      <header class="topbar">
+        <span class="topbar-title">解答一覧</span>
+      </header>
+      <div id="examList"></div>
+      <button id="examListFinishBtn" class="btn btn-primary btn-block">終了する</button>
+    </section>
+
+    <!-- ===== 結果 ===== -->
+    <section id="screen-result" class="screen hidden">
+      <div class="result-hero">
+        <div class="mascot" id="resultMascot"></div>
+        <h1 id="resultTitle">お疲れさま！</h1>
+        <div class="score-ring" id="scoreRing">
+          <span id="scorePct">0%</span>
+        </div>
+        <p id="resultLine"></p>
+        <p id="passLine" class="pass-line"></p>
+        <p id="streakLine" class="streak-line hidden"></p>
+        <p id="streakMsg" class="streak-msg hidden"></p>
+      </div>
+      <div class="card" id="sectionBreakdown"></div>
+      <div id="remedChoice" class="hidden">
+        <button id="remedStartBtn" class="btn btn-primary btn-block">復習する（間違えた問題に再挑戦）</button>
+        <button id="remedSkipBtn" class="btn btn-block">やめる</button>
+      </div>
+      <button id="reviewBtn" class="btn btn-block">間違えた問題を復習</button>
+      <button id="resultHomeBtn" class="btn btn-primary btn-block">ホームへ</button>
+    </section>
+
+    <!-- ===== 復習 ===== -->
+    <section id="screen-review" class="screen hidden">
+      <header class="topbar">
+        <button class="icon-btn" data-nav="result">‹</button>
+        <span class="topbar-title">復習</span>
+        <span></span>
+      </header>
+      <div id="reviewList"></div>
+      <button id="reviewHomeBtn" class="btn btn-primary btn-block">ホームへ</button>
+    </section>
+
+    <!-- ===== 成績 ===== -->
+    <section id="screen-stats" class="screen hidden">
+      <header class="topbar">
+        <button class="icon-btn" data-nav="home">‹</button>
+        <span class="topbar-title">成績</span>
+        <span class="topbar-user" id="statsUser"></span>
+      </header>
+      <div id="statsBody"></div>
+      <button id="resetStatsBtn" class="btn btn-ghost btn-block">この成績をリセット</button>
+    </section>
+  </div>
+
+  <!-- 中断確認シート -->
+  <div id="quitSheet" class="quit-sheet hidden">
+    <div class="quit-inner">
+      <p class="quit-title">セッションを中断しますか？</p>
+      <button id="quitGoResult" class="btn btn-primary btn-block">途中結果を見る</button>
+      <button id="quitNoSave" class="btn btn-block">記録せずにホームへ</button>
+      <button id="quitCancel" class="btn btn-ghost btn-block">続ける</button>
+    </div>
+  </div>
+
+  <!-- 紙吹雪レイヤー -->
+  <canvas id="confetti" class="confetti hidden"></canvas>
+
+  <script src="js/config.js"></script>
+  <script src="js/cartridge.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 170" width="460" height="170">
+  <rect width="460" height="170" fill="#ffffff"/>
+  <g stroke="#3c3c3c" stroke-width="2.5" fill="#eef4f8">
+    <polygon points="60.0,34.0 94.6,94.0 25.4,94.0"/>
+    <polygon points="146,102 182,42 240,42 204,102"/>
+    <rect x="256" y="44" width="72" height="56"/>
+    <polygon points="400.0,32.0 438.0,59.6 423.5,104.4 376.5,104.4 362.0,59.6"/>
+  </g>
+  <g font-family="sans-serif" font-size="16" fill="#3c3c3c" text-anchor="middle">
+    <text x="60" y="152">ア</text><text x="193" y="152">イ</text>
+    <text x="292" y="152">ウ</text><text x="400" y="152">エ</text>
+  </g>
+</svg>

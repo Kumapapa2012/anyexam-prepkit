@@ -1,0 +1,265 @@
+{
+  "title": "複数選択問題",
+  "questions": [
+    {
+      "id": 2001, "type": "multi", "section": "multi",
+      "question": "素数をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "51" },
+        { "key": "b", "text": "53" },
+        { "key": "c", "text": "57" },
+        { "key": "d", "text": "59" },
+        { "key": "e", "text": "61" }
+      ],
+      "correct": ["b", "d", "e"],
+      "explanation": "51 = 3 × 17、57 = 3 × 19 なので素数ではありません。53・59・61 はいずれも素数です。各桁の和が 3 の倍数なら、その数も 3 で割り切れます（51→6、57→12）。"
+    },
+    {
+      "id": 2002, "type": "multi", "section": "multi",
+      "question": "都道府県庁所在地の名前が、都道府県名と異なるものをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "岩手県" },
+        { "key": "b", "text": "福岡県" },
+        { "key": "c", "text": "千葉県" },
+        { "key": "d", "text": "島根県" },
+        { "key": "e", "text": "香川県" }
+      ],
+      "correct": ["a", "d", "e"],
+      "explanation": "岩手県は盛岡市、島根県は松江市、香川県は高松市で、いずれも県名と異なります。福岡県は福岡市、千葉県は千葉市なので県名と同じです。"
+    },
+    {
+      "id": 2003, "type": "multi", "section": "multi",
+      "question": "哺乳類をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "イルカ" },
+        { "key": "b", "text": "ペンギン" },
+        { "key": "c", "text": "コウモリ" },
+        { "key": "d", "text": "カモノハシ" },
+        { "key": "e", "text": "ウミガメ" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "イルカは水中で暮らす哺乳類、コウモリは空を飛ぶ哺乳類、カモノハシは卵を産みますが乳で子を育てる哺乳類です。ペンギンは鳥類、ウミガメは爬虫類です。"
+    },
+    {
+      "id": 2004, "type": "multi", "section": "multi",
+      "question": "プログラミング言語をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "Python" },
+        { "key": "b", "text": "HTML" },
+        { "key": "c", "text": "Rust" },
+        { "key": "d", "text": "Go" },
+        { "key": "e", "text": "JSON" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "HTML はマークアップ言語、JSON はデータ記述形式であり、いずれもプログラミング言語ではありません。Python・Rust・Go はプログラミング言語です。"
+    },
+    {
+      "id": 2005, "type": "multi", "section": "multi",
+      "question": "4 の倍数をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "114" },
+        { "key": "b", "text": "128" },
+        { "key": "c", "text": "216" },
+        { "key": "d", "text": "342" },
+        { "key": "e", "text": "500" }
+      ],
+      "correct": ["b", "c", "e"],
+      "explanation": "下2桁が 4 の倍数なら、その数も 4 の倍数です。28・16・00 は 4 で割り切れますが、14 と 42 は割り切れません。"
+    },
+    {
+      "id": 2006, "type": "multi", "section": "multi",
+      "question": "液体から気体への変化を表す語をすべて選びなさい（2つ）。",
+      "choices": [
+        { "key": "a", "text": "蒸発" },
+        { "key": "b", "text": "凝縮" },
+        { "key": "c", "text": "沸騰" },
+        { "key": "d", "text": "融解" },
+        { "key": "e", "text": "凝固" }
+      ],
+      "correct": ["a", "c"],
+      "explanation": "蒸発と沸騰はどちらも液体が気体になる現象です（沸騰は内部からも気化する状態）。凝縮は気体→液体、融解は固体→液体、凝固は液体→固体です。"
+    },
+    {
+      "id": 2007, "type": "multi", "section": "multi",
+      "question": "江戸時代に活躍した人物をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "伊能忠敬" },
+        { "key": "b", "text": "紫式部" },
+        { "key": "c", "text": "松尾芭蕉" },
+        { "key": "d", "text": "杉田玄白" },
+        { "key": "e", "text": "平将門" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "伊能忠敬（測量）・松尾芭蕉（俳諧）・杉田玄白（解体新書）はいずれも江戸時代の人物です。紫式部は平安時代、平将門も平安時代の人物です。"
+    },
+    {
+      "id": 2008, "type": "multi", "section": "multi",
+      "question": "1 km より長い距離をすべて選びなさい（2つ）。",
+      "choices": [
+        { "key": "a", "text": "800 m" },
+        { "key": "b", "text": "1,200 m" },
+        { "key": "c", "text": "0.5 km" },
+        { "key": "d", "text": "150,000 cm" },
+        { "key": "e", "text": "9,000 mm" }
+      ],
+      "correct": ["b", "d"],
+      "explanation": "1 km = 1,000 m = 100,000 cm = 1,000,000 mm です。1,200 m と 150,000 cm（= 1,500 m）が該当します。9,000 mm は 9 m にすぎません。"
+    },
+    {
+      "id": 2009, "type": "multi", "section": "multi",
+      "question": "Web ブラウザで動作する技術をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "JavaScript" },
+        { "key": "b", "text": "CSS" },
+        { "key": "c", "text": "PostgreSQL" },
+        { "key": "d", "text": "WebAssembly" },
+        { "key": "e", "text": "systemd" }
+      ],
+      "correct": ["a", "b", "d"],
+      "explanation": "JavaScript・CSS・WebAssembly はブラウザ上で動作します。PostgreSQL はサーバー側のデータベース、systemd は Linux のサービス管理の仕組みです。"
+    },
+    {
+      "id": 2010, "type": "multi", "section": "multi",
+      "question": "英語として文法的に正しい文をすべて選びなさい（2つ）。",
+      "choices": [
+        { "key": "a", "text": "She has been working here since 2019." },
+        { "key": "b", "text": "He don't like coffee." },
+        { "key": "c", "text": "I have lived in Kyoto for three years." },
+        { "key": "d", "text": "They was late for the meeting." },
+        { "key": "e", "text": "We discussed about the plan." }
+      ],
+      "correct": ["a", "c"],
+      "explanation": "b は He doesn't、d は They were が正しい形です。e の discuss は他動詞なので about は不要（We discussed the plan.）です。"
+    },
+    {
+      "id": 2011, "type": "multi", "section": "multi",
+      "question": "太陽系の惑星をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "海王星" },
+        { "key": "b", "text": "冥王星" },
+        { "key": "c", "text": "金星" },
+        { "key": "d", "text": "天王星" },
+        { "key": "e", "text": "ケレス" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "冥王星は 2006 年に準惑星へ分類し直されました。ケレスも準惑星です。現在の惑星は水星・金星・地球・火星・木星・土星・天王星・海王星の8つです。"
+    },
+    {
+      "id": 2012, "type": "multi", "section": "multi",
+      "question": "三角形が1つに決まる条件をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "3辺の長さが分かっている" },
+        { "key": "b", "text": "3つの角の大きさが分かっている" },
+        { "key": "c", "text": "2辺とその間の角が分かっている" },
+        { "key": "d", "text": "1辺とその両端の角が分かっている" },
+        { "key": "e", "text": "2つの角だけが分かっている" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "合同条件にあたるのは「3辺」「2辺とその間の角」「1辺とその両端の角」です。角だけが分かっても大きさが決まらず、相似な三角形が無数に存在します。"
+    },
+    {
+      "id": 2013, "type": "multi", "section": "multi",
+      "question": "パスワードの安全性を高める対策として適切なものをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "サービスごとに異なるパスワードを使う" },
+        { "key": "b", "text": "二要素認証を有効にする" },
+        { "key": "c", "text": "覚えやすいよう誕生日を含める" },
+        { "key": "d", "text": "パスワード管理ソフトを使う" },
+        { "key": "e", "text": "同じパスワードを定期的に使い回す" }
+      ],
+      "correct": ["a", "b", "d"],
+      "explanation": "使い回しは、どこか1か所の漏えいが他のサービスへ波及します。誕生日など推測しやすい情報も避けるべきです。サービスごとに固有のパスワードを管理ソフトで扱い、二要素認証を併用するのが基本です。"
+    },
+    {
+      "id": 2014, "type": "multi", "section": "multi",
+      "question": "日本三名園に含まれる庭園をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "兼六園" },
+        { "key": "b", "text": "後楽園" },
+        { "key": "c", "text": "偕楽園" },
+        { "key": "d", "text": "六義園" },
+        { "key": "e", "text": "栗林公園" }
+      ],
+      "correct": ["a", "b", "c"],
+      "explanation": "日本三名園は金沢の兼六園、岡山の後楽園、水戸の偕楽園です。六義園（東京）と栗林公園（高松）も名園ですが三名園には含まれません。"
+    },
+    {
+      "id": 2015, "type": "multi", "section": "multi",
+      "question": "2 の累乗（2ⁿ, n は 0 以上の整数）であるものをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "64" },
+        { "key": "b", "text": "96" },
+        { "key": "c", "text": "128" },
+        { "key": "d", "text": "512" },
+        { "key": "e", "text": "1000" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "64 = 2⁶、128 = 2⁷、512 = 2⁹ です。96 = 2⁵ × 3、1000 = 2³ × 5³ なので 2 の累乗ではありません。"
+    },
+    {
+      "id": 2016, "type": "multi", "section": "multi",
+      "question": "ノーベル賞の対象分野に含まれるものをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "物理学" },
+        { "key": "b", "text": "数学" },
+        { "key": "c", "text": "文学" },
+        { "key": "d", "text": "生理学・医学" },
+        { "key": "e", "text": "建築" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "ノーベル賞は物理学・化学・生理学医学・文学・平和の5分野（および経済学賞）です。数学にはフィールズ賞、建築にはプリツカー賞という別の賞があります。"
+    },
+    {
+      "id": 2017, "type": "multi", "section": "multi",
+      "question": "電流を通しやすい物質をすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "銅" },
+        { "key": "b", "text": "ガラス" },
+        { "key": "c", "text": "アルミニウム" },
+        { "key": "d", "text": "食塩水" },
+        { "key": "e", "text": "ゴム" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "銅とアルミニウムは金属で電気をよく通します。食塩水はイオンが移動するため電解質として電流を通します。ガラスとゴムは絶縁体です。"
+    },
+    {
+      "id": 2018, "type": "multi", "section": "multi",
+      "question": "バージョン管理システム Git のコマンドとして存在するものをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "git rebase" },
+        { "key": "b", "text": "git deploy" },
+        { "key": "c", "text": "git stash" },
+        { "key": "d", "text": "git bisect" },
+        { "key": "e", "text": "git rollback" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "rebase（履歴の付け替え）・stash（作業の一時退避）・bisect（二分探索でバグの混入点を特定）はいずれも標準コマンドです。deploy と rollback は Git の標準コマンドではありません。"
+    },
+    {
+      "id": 2019, "type": "multi", "section": "multi",
+      "question": "文章として敬語の使い方が正しいものをすべて選びなさい（2つ）。",
+      "choices": [
+        { "key": "a", "text": "先生がおっしゃったとおりです。" },
+        { "key": "b", "text": "お客様が申されました。" },
+        { "key": "c", "text": "資料を拝見しました。" },
+        { "key": "d", "text": "部長が拝見されました。" },
+        { "key": "e", "text": "こちらで伺ってください。" }
+      ],
+      "correct": ["a", "c"],
+      "explanation": "「申す」は謙譲語なので客に使う b は誤り（正しくは「おっしゃいました」）。「拝見する」も謙譲語なので、部長の動作に使う d は誤り（正しくは「ご覧になりました」）。e の「伺う」も謙譲語で、相手の動作には使えません。"
+    },
+    {
+      "id": 2020, "type": "multi", "section": "multi",
+      "question": "次のうち、値が等しいものの組み合わせをすべて選びなさい（3つ）。",
+      "choices": [
+        { "key": "a", "text": "0.25 と 1/4" },
+        { "key": "b", "text": "0.3 と 1/3" },
+        { "key": "c", "text": "75% と 3/4" },
+        { "key": "d", "text": "1.5 と 3/2" },
+        { "key": "e", "text": "0.2 と 1/5 より大きい値" }
+      ],
+      "correct": ["a", "c", "d"],
+      "explanation": "1/3 は 0.333… なので 0.3 とは等しくありません。e は 0.2 = 1/5 なので「より大きい」は成り立ちません。残る3つはいずれも等しい値です。"
+    }
+  ]
+}

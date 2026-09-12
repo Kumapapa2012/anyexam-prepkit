@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300">
+  <rect width="460" height="300" fill="#ffffff"/>
+  <g stroke="#3c3c3c" stroke-width="2.5" fill="none">
+    <line x1="40" y1="60" x2="430" y2="60"/>
+    <line x1="40" y1="240" x2="430" y2="240"/>
+    <line x1="120" y1="60" x2="260" y2="154"/>
+    <line x1="177" y1="240" x2="260" y2="154"/>
+  </g>
+  <text x="404" y="50" font-size="16" fill="#777" font-family="sans-serif">l</text>
+  <text x="404" y="262" font-size="16" fill="#777" font-family="sans-serif">m</text>
+  <text x="112" y="48" font-size="15" fill="#3c3c3c" font-family="sans-serif">Q</text>
+  <text x="270" y="160" font-size="15" fill="#3c3c3c" font-family="sans-serif">P</text>
+  <text x="170" y="262" font-size="15" fill="#3c3c3c" font-family="sans-serif">R</text>
+  <path d="M154.0 60.0 A34 34 0 0 1 148.2 79.0" stroke="#1cb0f6" stroke-width="2.5" fill="none"/><text x="167.8" y="79.6" font-size="15" fill="#1cb0f6" text-anchor="middle" font-family="sans-serif">34°</text><path d="M200.6 215.5 A34 34 0 0 1 211.0 240.0" stroke="#58cc02" stroke-width="2.5" fill="none"/><text x="224.9" y="224.7" font-size="15" fill="#46a302" text-anchor="middle" font-family="sans-serif">46°</text><path d="M239.2 175.6 A30 30 0 0 1 235.1 137.3" stroke="#ff4b4b" stroke-width="2.5" fill="none"/><text x="212.3" y="164.1" font-size="15" fill="#e63838" text-anchor="middle" font-family="sans-serif">x</text>
+  <text x="40" y="285" font-size="14" fill="#777" font-family="sans-serif">l // m</text>
+</svg>

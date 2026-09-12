@@ -1,0 +1,50 @@
+# サンプル試験カートリッジを Cloud Run へデプロイするための compose。
+#
+# SECRET_KEY は鍵なのでこのファイルには書かず、デプロイ時に環境変数で渡す。
+#
+#   PowerShell:
+#     $env:SECRET_KEY = python -c "import secrets;print(secrets.token_hex(32))"
+#     cd deploy/cloudrun
+#     gcloud run compose up compose.yaml --allow-unauthenticated --region asia-northeast1
+#
+#   bash:
+#     export SECRET_KEY=$(python -c "import secrets;print(secrets.token_hex(32))")
+#     cd deploy/cloudrun && gcloud run compose up compose.yaml --allow-unauthenticated
+#
+# 毎回別の鍵にすると、デプロイのたびに既存のセッションは無効になる（デモなので支障はない）。
+# セッションを保ちたい場合は同じ値を使い回すか、Secret Manager に置くこと。
+#
+# NAS 向けのルート docker-compose.yml との違い:
+#   - バインドマウントを使わない（Cloud Run のファイルシステムは揮発性）
+#   - HTTPS 前提なので COOKIE_SECURE=1
+#   - 配信するカートリッジは sample-exam
+#   - DEMO_MODE=1（新規登録を塞ぎ、ボタン1つで使い捨てユーザーを作る）
+name: sample-exam
+
+services:
+  quiz:
+    x-google-cloudrun:
+      ingress-container: true
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+      args:
+        CARTRIDGE: sample-exam
+    ports:
+      - "8080:8080"
+    environment:
+      - TZ=Asia/Tokyo
+      # PORT は Cloud Run が自動で渡す予約変数のため、ここでは指定できない。
+      # Dockerfile の CMD が ${PORT:-8000} で待ち受けるので自動的に追従する。
+      # セッション署名鍵。複数インスタンスでログインを維持するため全台で同じ値が要る。
+      # 未設定ならデプロイを中止する（既定値を埋め込まない）。
+      - SECRET_KEY=${SECRET_KEY:?SECRET_KEY を環境変数で設定してください}
+      # デモモード：新規登録を塞ぎ、「デモ開始」で使い捨てユーザーを作る。
+      # 成績は毎回まっさらな状態から始まり、セッションが切れれば辿れなくなる。
+      - DEMO_MODE=1
+      # Cloud Run は HTTPS で配信されるため Secure クッキーを有効化。
+      - COOKIE_SECURE=1
+      # SQLite はコンテナ内の書き込み可能領域に置く。
+      # 注意: Cloud Run のファイルシステムは揮発性で、インスタンスの入れ替えや
+      # スケールアウトで成績データは失われる。デモ用途に限ること。
+      - DB_PATH=/srv/data/records.db

@@ -1,0 +1,245 @@
+{
+  "title": "単一選択問題",
+  "questions": [
+    {
+      "id": 1001, "type": "single", "section": "single",
+      "question": "1 から 100 までの整数をすべて足すといくつになりますか。",
+      "choices": [
+        { "key": "a", "text": "4950" },
+        { "key": "b", "text": "5050" },
+        { "key": "c", "text": "5100" },
+        { "key": "d", "text": "10100" }
+      ],
+      "correct": ["b"],
+      "explanation": "1 から n までの和は n(n+1)/2 です。100 × 101 ÷ 2 = 5050 となります。両端から組にすると 1+100, 2+99, … と 101 の組が 50 できる、と考えても同じです。"
+    },
+    {
+      "id": 1002, "type": "single", "section": "single",
+      "question": "水が氷になるとき、体積はどうなりますか。",
+      "choices": [
+        { "key": "a", "text": "増える" },
+        { "key": "b", "text": "減る" },
+        { "key": "c", "text": "変わらない" },
+        { "key": "d", "text": "温度によって増えたり減ったりする" }
+      ],
+      "correct": ["a"],
+      "explanation": "水は凍ると分子が隙間の多い結晶構造をつくるため、体積が約 9% 増えます。氷が水に浮くのもこのためです。"
+    },
+    {
+      "id": 1003, "type": "single", "section": "single",
+      "question": "日本で最も面積が大きい湖はどれですか。",
+      "choices": [
+        { "key": "a", "text": "霞ヶ浦" },
+        { "key": "b", "text": "琵琶湖" },
+        { "key": "c", "text": "サロマ湖" },
+        { "key": "d", "text": "猪苗代湖" }
+      ],
+      "correct": ["b"],
+      "explanation": "琵琶湖は面積約 670 km² で日本最大です。2番目が霞ヶ浦（約 220 km²）、3番目がサロマ湖（約 150 km²）です。"
+    },
+    {
+      "id": 1004, "type": "single", "section": "single",
+      "question": "1 バイトは何ビットですか。",
+      "choices": [
+        { "key": "a", "text": "4 ビット" },
+        { "key": "b", "text": "8 ビット" },
+        { "key": "c", "text": "16 ビット" },
+        { "key": "d", "text": "1024 ビット" }
+      ],
+      "correct": ["b"],
+      "explanation": "1 バイト = 8 ビットです。8 ビットで 2⁸ = 256 通りの値を表せます。"
+    },
+    {
+      "id": 1005, "type": "single", "section": "single",
+      "question": "鎌倉幕府を開いたのは誰ですか。",
+      "choices": [
+        { "key": "a", "text": "平清盛" },
+        { "key": "b", "text": "源頼朝" },
+        { "key": "c", "text": "足利尊氏" },
+        { "key": "d", "text": "徳川家康" }
+      ],
+      "correct": ["b"],
+      "explanation": "源頼朝が鎌倉に幕府を開きました。足利尊氏は室町幕府、徳川家康は江戸幕府の創始者です。平清盛は幕府ではなく平氏政権を築きました。"
+    },
+    {
+      "id": 1006, "type": "single", "section": "single",
+      "question": "光が 1 秒間に進む距離に最も近いのはどれですか。",
+      "choices": [
+        { "key": "a", "text": "約 3 万 km" },
+        { "key": "b", "text": "約 30 万 km" },
+        { "key": "c", "text": "約 300 万 km" },
+        { "key": "d", "text": "約 3000 万 km" }
+      ],
+      "correct": ["b"],
+      "explanation": "真空中の光速は約 30 万 km/秒（正確には約 299,792 km/秒）です。地球1周が約 4 万 km なので、1 秒間に約 7 周半します。"
+    },
+    {
+      "id": 1007, "type": "single", "section": "single",
+      "question": "「羊頭狗肉」の意味として正しいものはどれですか。",
+      "choices": [
+        { "key": "a", "text": "見かけは立派だが中身が伴わないこと" },
+        { "key": "b", "text": "小さなことから大きな成果が生まれること" },
+        { "key": "c", "text": "二つの物事を同時に成し遂げること" },
+        { "key": "d", "text": "取るに足らない些細な争いのこと" }
+      ],
+      "correct": ["a"],
+      "explanation": "羊の頭を看板に掲げながら犬の肉を売る、という故事から、見せかけと中身が違うことを指します。"
+    },
+    {
+      "id": 1008, "type": "single", "section": "single",
+      "question": "正八角形の内角の和は何度ですか。",
+      "choices": [
+        { "key": "a", "text": "900°" },
+        { "key": "b", "text": "1080°" },
+        { "key": "c", "text": "1260°" },
+        { "key": "d", "text": "1440°" }
+      ],
+      "correct": ["b"],
+      "explanation": "n 角形の内角の和は 180°×(n−2) です。8 角形なら 180°×6 = 1080° となります。1つの内角は 1080° ÷ 8 = 135° です。"
+    },
+    {
+      "id": 1009, "type": "single", "section": "single",
+      "question": "HTTP のステータスコード 404 が意味するのはどれですか。",
+      "choices": [
+        { "key": "a", "text": "サーバー内部のエラー" },
+        { "key": "b", "text": "認証が必要" },
+        { "key": "c", "text": "要求されたリソースが見つからない" },
+        { "key": "d", "text": "リクエストが正常に処理された" }
+      ],
+      "correct": ["c"],
+      "explanation": "404 Not Found は、指定された URL に対応するリソースが存在しないことを表します。500 は内部エラー、401 は認証が必要、200 は成功です。"
+    },
+    {
+      "id": 1010, "type": "single", "section": "single",
+      "question": "地球の大気に最も多く含まれている気体はどれですか。",
+      "choices": [
+        { "key": "a", "text": "酸素" },
+        { "key": "b", "text": "二酸化炭素" },
+        { "key": "c", "text": "窒素" },
+        { "key": "d", "text": "アルゴン" }
+      ],
+      "correct": ["c"],
+      "explanation": "乾燥空気の約 78% が窒素、約 21% が酸素です。アルゴンは約 0.9%、二酸化炭素は約 0.04% にすぎません。"
+    },
+    {
+      "id": 1011, "type": "single", "section": "single",
+      "question": "定価 2,000 円の商品を 3 割引で買い、さらにそこから 10% 引きになりました。支払額はいくらですか。",
+      "choices": [
+        { "key": "a", "text": "1,200 円" },
+        { "key": "b", "text": "1,260 円" },
+        { "key": "c", "text": "1,400 円" },
+        { "key": "d", "text": "1,600 円" }
+      ],
+      "correct": ["b"],
+      "explanation": "2000 × 0.7 = 1400 円、さらに 1400 × 0.9 = 1260 円です。割引率を足して「4割引」としてはいけません（それだと 1200 円になります）。"
+    },
+    {
+      "id": 1012, "type": "single", "section": "single",
+      "question": "英語の \"Would you mind opening the window?\" に対して、窓を開けてもよいと伝える返答として自然なのはどれですか。",
+      "choices": [
+        { "key": "a", "text": "Yes, I would." },
+        { "key": "b", "text": "Not at all." },
+        { "key": "c", "text": "Yes, I mind." },
+        { "key": "d", "text": "No, thank you." }
+      ],
+      "correct": ["b"],
+      "explanation": "mind は「気にする」なので、承諾するときは否定で答えます。\"Not at all.\" や \"Of course not.\" が自然です。\"Yes\" で答えると「気にします＝断る」の意味になってしまいます。"
+    },
+    {
+      "id": 1013, "type": "single", "section": "single",
+      "question": "次のうち、再生可能エネルギーに分類されないものはどれですか。",
+      "choices": [
+        { "key": "a", "text": "地熱" },
+        { "key": "b", "text": "風力" },
+        { "key": "c", "text": "天然ガス" },
+        { "key": "d", "text": "バイオマス" }
+      ],
+      "correct": ["c"],
+      "explanation": "天然ガスは化石燃料であり、再生可能エネルギーには含まれません。地熱・風力・バイオマスはいずれも再生可能エネルギーです。"
+    },
+    {
+      "id": 1014, "type": "single", "section": "single",
+      "question": "2 進数の 1011 を 10 進数で表すといくつですか。",
+      "choices": [
+        { "key": "a", "text": "9" },
+        { "key": "b", "text": "11" },
+        { "key": "c", "text": "13" },
+        { "key": "d", "text": "23" }
+      ],
+      "correct": ["b"],
+      "explanation": "各桁は 8・4・2・1 の重みを持ちます。1011 は 8 + 0 + 2 + 1 = 11 です。"
+    },
+    {
+      "id": 1015, "type": "single", "section": "single",
+      "question": "「情けは人のためならず」の本来の意味はどれですか。",
+      "choices": [
+        { "key": "a", "text": "情けをかけるとその人のためにならない" },
+        { "key": "b", "text": "人にかけた情けはめぐりめぐって自分に返ってくる" },
+        { "key": "c", "text": "情けをかけるかどうかは人によって決めるべきだ" },
+        { "key": "d", "text": "他人に情けを期待してはいけない" }
+      ],
+      "correct": ["b"],
+      "explanation": "「人のためならず」は「その人のためだけではない」という意味で、巡り巡って自分に返ってくる、という教えです。a の解釈は誤用として広まったものです。"
+    },
+    {
+      "id": 1016, "type": "single", "section": "single",
+      "question": "赤道上での地球の自転による速さに最も近いのはどれですか。",
+      "choices": [
+        { "key": "a", "text": "時速 約 170 km" },
+        { "key": "b", "text": "時速 約 1,700 km" },
+        { "key": "c", "text": "時速 約 17,000 km" },
+        { "key": "d", "text": "時速 約 170,000 km" }
+      ],
+      "correct": ["b"],
+      "explanation": "赤道の全周は約 40,000 km で、24 時間で 1 周します。40,000 ÷ 24 ≒ 1,670 km/h です。"
+    },
+    {
+      "id": 1017, "type": "single", "section": "single",
+      "question": "データベースで「主キー」が満たすべき条件はどれですか。",
+      "choices": [
+        { "key": "a", "text": "必ず数値型でなければならない" },
+        { "key": "b", "text": "重複せず、空でないこと" },
+        { "key": "c", "text": "1つの表に必ず2つ以上必要である" },
+        { "key": "d", "text": "更新のたびに変わらなければならない" }
+      ],
+      "correct": ["b"],
+      "explanation": "主キーは行を一意に識別するため、一意性（重複しない）と非 NULL（空でない）を満たす必要があります。型は問わず、1つの表に1つだけ定義します。"
+    },
+    {
+      "id": 1018, "type": "single", "section": "single",
+      "question": "1 辺が 6 cm の立方体の表面積はいくらですか。",
+      "choices": [
+        { "key": "a", "text": "36 cm²" },
+        { "key": "b", "text": "144 cm²" },
+        { "key": "c", "text": "216 cm²" },
+        { "key": "d", "text": "396 cm²" }
+      ],
+      "correct": ["c"],
+      "explanation": "立方体の面は 6 つで、1 面の面積は 6 × 6 = 36 cm² です。36 × 6 = 216 cm² となります。216 cm³ は体積なので混同しないよう注意します。"
+    },
+    {
+      "id": 1019, "type": "single", "section": "single",
+      "question": "音が空気中を伝わる速さに最も近いのはどれですか（気温 15℃ 前後）。",
+      "choices": [
+        { "key": "a", "text": "秒速 約 34 m" },
+        { "key": "b", "text": "秒速 約 340 m" },
+        { "key": "c", "text": "秒速 約 3,400 m" },
+        { "key": "d", "text": "秒速 約 34,000 m" }
+      ],
+      "correct": ["b"],
+      "explanation": "常温の空気中で音速は約 340 m/秒です。雷が光ってから音が聞こえるまでの秒数に 340 を掛けると、おおよその距離が分かります。"
+    },
+    {
+      "id": 1020, "type": "single", "section": "single",
+      "question": "国際連合の安全保障理事会において、常任理事国でない国はどれですか。",
+      "choices": [
+        { "key": "a", "text": "フランス" },
+        { "key": "b", "text": "ロシア" },
+        { "key": "c", "text": "中国" },
+        { "key": "d", "text": "ドイツ" }
+      ],
+      "correct": ["d"],
+      "explanation": "常任理事国はアメリカ・イギリス・フランス・ロシア・中国の5か国です。ドイツと日本は非常任理事国に選出されることはありますが、常任理事国ではありません。"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "title": "画像問題",
+  "questions": [
+    {
+      "id": 3001,
+      "type": "single",
+      "section": "image",
+      "question": "Read the description and choose the picture that matches it.\n\n\"The traffic light is red, and a red car is waiting on the road. The person on the sidewalk is not carrying anything.\"",
+      "choices": [
+        { "key": "a", "text": "Picture A", "media": [{ "kind": "image", "src": "assets/street-1a.svg", "alt": "赤信号と赤い車の街角" }] },
+        { "key": "b", "text": "Picture B", "media": [{ "kind": "image", "src": "assets/street-1b.svg", "alt": "青信号と青い車の街角" }] }
+      ],
+      "correct": ["a"],
+      "explanation": "説明にある通り、信号が赤で、車が赤いのは Picture A です。Picture B は信号が青で車も青色です。2枚の画像はそれ以外（建物・人物・道路）が同じなので、色の違いだけで判断します。"
+    },
+    {
+      "id": 3002,
+      "type": "single",
+      "section": "image",
+      "question": "Read the description and choose the picture that matches it.\n\n\"It is the same street corner. The traffic light is green and a yellow car is on the road. The person on the sidewalk is walking a dog.\"",
+      "choices": [
+        { "key": "a", "text": "Picture A", "media": [{ "kind": "image", "src": "assets/street-2a.svg", "alt": "傘をさした人物がいる街角" }] },
+        { "key": "b", "text": "Picture B", "media": [{ "kind": "image", "src": "assets/street-2b.svg", "alt": "犬を連れた人物がいる街角" }] }
+      ],
+      "correct": ["b"],
+      "explanation": "犬を連れているのは Picture B です。Picture A の人物は傘をさしています。信号の色と車の色は両方とも同じ（緑・黄色）なので、手がかりになるのは傘と犬だけです。"
+    },
+    {
+      "id": 3003,
+      "type": "single",
+      "section": "image",
+      "question": "図で l // m のとき、角 x の大きさを求めなさい。",
+      "media": [{ "kind": "image", "src": "assets/geo-parallel.svg", "alt": "平行な2直線 l と m にはさまれた折れ線 QPR。角 Q が 34 度、角 R が 46 度、角 P が x" }],
+      "choices": [
+        { "key": "a", "text": "68°" },
+        { "key": "b", "text": "76°" },
+        { "key": "c", "text": "80°" },
+        { "key": "d", "text": "100°" }
+      ],
+      "correct": ["c"],
+      "explanation": "点 P を通り l（および m）に平行な直線を引きます。錯角より、その直線と PQ のなす角は 34°、PR とのなす角は 46° になります。x はこの2つの和なので x = 34° + 46° = 80° です。"
+    },
+    {
+      "id": 3004,
+      "type": "single",
+      "section": "image",
+      "question": "円 O において、中心角 ∠AOB = 116° です。円周上の点 P について、円周角 x = ∠APB の大きさを求めなさい。",
+      "media": [{ "kind": "image", "src": "assets/geo-circle.svg", "alt": "円 O の中心角 AOB が 116 度、円周角 APB が x" }],
+      "choices": [
+        { "key": "a", "text": "29°" },
+        { "key": "b", "text": "58°" },
+        { "key": "c", "text": "64°" },
+        { "key": "d", "text": "116°" }
+      ],
+      "correct": ["b"],
+      "explanation": "円周角の定理より、同じ弧に対する円周角は中心角の半分です。x = 116° ÷ 2 = 58° となります。"
+    },
+    {
+      "id": 3005,
+      "type": "single",
+      "section": "image",
+      "question": "グラフから、売上が前月より最も大きく増えたのは何月ですか。",
+      "media": [{ "kind": "image", "src": "assets/chart-sales.svg", "alt": "1月から6月までの月別売上の棒グラフ" }],
+      "choices": [
+        { "key": "a", "text": "3月" },
+        { "key": "b", "text": "4月" },
+        { "key": "c", "text": "5月" },
+        { "key": "d", "text": "6月" }
+      ],
+      "correct": ["a"],
+      "explanation": "前月比の増加は、3月が 58 − 35 = 23、5月が 67 − 51 = 16 です。4月と6月は前月より減っています。したがって最も増えたのは3月です。"
+    },
+    {
+      "id": 3006,
+      "type": "multi",
+      "section": "image",
+      "question": "グラフについて、正しいものをすべて選びなさい（3つ）。",
+      "media": [{ "kind": "image", "src": "assets/chart-sales.svg", "alt": "1月から6月までの月別売上の棒グラフ" }],
+      "choices": [
+        { "key": "a", "text": "売上が 50 万円以上の月は3つある" },
+        { "key": "b", "text": "最も売上が低いのは2月である" },
+        { "key": "c", "text": "6月の売上は1月より多い" },
+        { "key": "d", "text": "売上は毎月増加している" },
+        { "key": "e", "text": "4月の売上は3月より多い" }
+      ],
+      "correct": ["a", "b", "c"],
+      "explanation": "50 万円以上は3月(58)・4月(51)・5月(67)の3つ。最も低いのは2月(35)。6月(49)は1月(42)より多いので、a・b・c は正しいです。4月と6月は前月より減っているので「毎月増加」ではなく、4月(51)は3月(58)より少ないため d・e は誤りです。"
+    },
+    {
+      "id": 3007,
+      "type": "single",
+      "section": "image",
+      "question": "このフローチャートに n = 10 を入力したとき、表示されるのはどれですか。",
+      "media": [{ "kind": "image", "src": "assets/flowchart.svg", "alt": "数値 n を入力し、10 以上なら「大」、そうでなければ「小」と表示するフローチャート" }],
+      "choices": [
+        { "key": "a", "text": "「小」と表示される" },
+        { "key": "b", "text": "「大」と表示される" },
+        { "key": "c", "text": "何も表示されずに終了する" },
+        { "key": "d", "text": "「小」と「大」の両方が表示される" }
+      ],
+      "correct": ["b"],
+      "explanation": "判定は「n は 10 以上か」です。n = 10 は 10 以上に含まれるため「はい」へ進み、「大」と表示されます。「10 より大きい」ではない点に注意してください。"
+    },
+    {
+      "id": 3008,
+      "type": "multi",
+      "section": "image",
+      "question": "このフローチャートについて、正しいものをすべて選びなさい（2つ）。",
+      "media": [{ "kind": "image", "src": "assets/flowchart.svg", "alt": "数値 n を入力し、10 以上なら「大」、そうでなければ「小」と表示するフローチャート" }],
+      "choices": [
+        { "key": "a", "text": "入力される値によらず、表示は必ず1回だけ行われる" },
+        { "key": "b", "text": "n = 9 を入力すると「小」と表示される" },
+        { "key": "c", "text": "繰り返し（ループ）の構造を持つ" },
+        { "key": "d", "text": "判定を「10 より大きい」に変えても、n = 10 の結果は変わらない" }
+      ],
+      "correct": ["a", "b"],
+      "explanation": "分岐はどちらか一方だけを通るので、表示は必ず1回です。n = 9 は 10 以上ではないので「小」。このフローチャートに繰り返しはありません。判定を「10 より大きい」に変えると n = 10 は「小」になり、結果が変わります。"
+    },
+    {
+      "id": 3009,
+      "type": "single",
+      "section": "image",
+      "question": "図の回路で、AB 間の合成抵抗はいくらですか。",
+      "media": [{ "kind": "image", "src": "assets/circuit.svg", "alt": "6 オームと 3 オームの抵抗が並列につながれた回路" }],
+      "choices": [
+        { "key": "a", "text": "2 Ω" },
+        { "key": "b", "text": "4.5 Ω" },
+        { "key": "c", "text": "9 Ω" },
+        { "key": "d", "text": "18 Ω" }
+      ],
+      "correct": ["a"],
+      "explanation": "並列接続なので 1/R = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2 より R = 2 Ω です。並列の合成抵抗は、最も小さい抵抗（この場合 3 Ω）より必ず小さくなります。"
+    },
+    {
+      "id": 3010,
+      "type": "single",
+      "section": "image",
+      "question": "次の4つの図形のうち、線対称でないものはどれですか。",
+      "media": [{ "kind": "image", "src": "assets/shapes.svg", "alt": "ア 正三角形、イ 平行四辺形、ウ 長方形、エ 正五角形" }],
+      "choices": [
+        { "key": "a", "text": "ア（正三角形）" },
+        { "key": "b", "text": "イ（平行四辺形）" },
+        { "key": "c", "text": "ウ（長方形）" },
+        { "key": "d", "text": "エ（正五角形）" }
+      ],
+      "correct": ["b"],
+      "explanation": "平行四辺形は点対称ですが、ひし形や長方形でない限り線対称ではありません。正三角形は3本、長方形は2本、正五角形は5本の対称軸を持ちます。"
+    }
+  ]
+}

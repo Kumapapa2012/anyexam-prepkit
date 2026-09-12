@@ -1,0 +1,23 @@
+services:
+  quiz:
+    build:
+      context: .
+      args:
+        # 配信するカートリッジ（cartridges/ 配下のディレクトリ名）
+        CARTRIDGE: sample-exam
+    image: anyexam-prepkit
+    container_name: anyexam-prepkit
+    ports:
+      - "8000:8000"          # ホスト側ポート:コンテナ
+    volumes:
+      - ./core/server/data:/srv/data   # SQLite を永続化（NAS のディスクに残る）
+    environment:
+      - TZ=Asia/Tokyo
+      # セッション署名鍵：本番では必ず固定の長いランダム値を設定（未設定だと再起動でログアウト）
+      #   生成例: python -c "import secrets;print(secrets.token_hex(32))"
+      # - SECRET_KEY=ここに長いランダム文字列
+      # 新規登録の招待コード：公開時は設定して無秩序な登録を防止（知っている人だけ登録可）
+      # - SIGNUP_CODE=好きな合言葉
+      # HTTPS（リバースプロキシ）経由なら 1 にして Secure クッキーを有効化
+      # - COOKIE_SECURE=1
+    restart: unless-stopped
