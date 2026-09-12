@@ -2,14 +2,25 @@
 #
 # SECRET_KEY は鍵なのでこのファイルには書かず、デプロイ時に環境変数で渡す。
 #
-#   PowerShell:
-#     $env:SECRET_KEY = python -c "import secrets;print(secrets.token_hex(32))"
-#     cd deploy/cloudrun
-#     gcloud run compose up compose.yaml --allow-unauthenticated --region asia-northeast1
+#   export SECRET_KEY=$(python -c "import secrets;print(secrets.token_hex(32))")
+#   cd deploy/cloudrun
+#   gcloud run compose up compose.yaml --allow-unauthenticated --region asia-northeast1
 #
-#   bash:
-#     export SECRET_KEY=$(python -c "import secrets;print(secrets.token_hex(32))")
-#     cd deploy/cloudrun && gcloud run compose up compose.yaml --allow-unauthenticated
+# ⚠ この方法は gcloud の run-compose コンポーネントを必要とし、環境によっては使えない
+#   （コンポーネントカタログに無いと install が no-op で終わり、
+#    "ERROR: run-compose binary not installed" になる）。
+#   その場合はリポジトリのルートから gcloud run deploy を使う。構成は同じになる。
+#
+#   初回:
+#     gcloud run deploy sample-exam --source . \
+#       --region asia-northeast1 --allow-unauthenticated \
+#       --set-env-vars "TZ=Asia/Tokyo,DEMO_MODE=1,COOKIE_SECURE=1,DB_PATH=/srv/data/records.db,SECRET_KEY=$SECRET_KEY"
+#
+#   2回目以降（--set-env-vars は付けない。付けると全置換になり SECRET_KEY が変わる）:
+#     gcloud run deploy sample-exam --source . --region asia-northeast1
+#
+#   Dockerfile の ARG CARTRIDGE は既定が sample-exam なので build-arg は要らない。
+#   → 詳細は Wiki の「デプロイ」を参照。
 #
 # 毎回別の鍵にすると、デプロイのたびに既存のセッションは無効になる（デモなので支障はない）。
 # セッションを保ちたい場合は同じ値を使い回すか、Secret Manager に置くこと。
