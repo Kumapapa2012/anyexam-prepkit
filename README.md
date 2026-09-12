@@ -106,14 +106,27 @@ cartridges/<id>/
 | `session.normalLength` | 通常セッションの問題数 |
 | `sections` | `{コード: {name, ratio}}`。表示名と本番出題比率（合計 1.0） |
 | `build.sources` | 問題ファイルの glob（カートリッジからの相対パス） |
-| `build.labels` | 手動分類ラベル `{問題ID: セクションコード}`（任意） |
-| `build.answerOverrides` | 正解の差し替え `{問題ID: ["a"]}`（任意） |
-| `build.explanationOverrides` | 解説の差し替え `{問題ID: "解説文"}`（任意） |
-| `build.translations` | 訳文ファイルの配列 `{問題ID: {question, choices[], explanation}}`（任意） |
-| `build.fallbackSection` | キーワード分類が0点だったときの既定セクション |
+| `build.labels` | 手動分類ラベルの**ファイルパス**。中身は `{問題ID: セクションコード}`（任意） |
+| `build.answerOverrides` | 正解を差し替える**ファイルパス**。中身は `{問題ID: ["a"]}`（任意） |
+| `build.explanationOverrides` | 解説を差し替える**ファイルパス**。中身は `{問題ID: "解説文"}`（任意） |
+| `build.translations` | 訳文**ファイルパスの配列**。各ファイルの中身は `{問題ID: {question, choices[], explanation}}`（任意） |
+| `build.fallbackSection` | キーワード分類が0点だったときの既定セクション（既定は `sections` の先頭キー） |
 | `build.keywords` | `{セクションコード: [[キーワード, 重み], …]}`。未ラベルの問題の自動分類に使用 |
 | `build.assets` | メディアを置くディレクトリ名（既定 `assets`）。`dist/` へそのままコピーされる |
 | `build.precacheMaxBytes` | 起動時に先読みするメディアの上限バイト数（既定 2097152 = 2MB） |
+
+`build.labels` / `build.answerOverrides` / `build.explanationOverrides` / `build.translations`
+の値はマップそのものではなく、**マップを収めた JSON ファイルのパス**（カートリッジからの相対パス）。
+
+```jsonc
+// cartridge.json
+"build": { "labels": "data/labels.json", "translations": ["data/ja.json"] }
+```
+
+```jsonc
+// data/labels.json — 問題ID（文字列）→ セクションコード
+{ "163242799": "single", "163242800": "multi" }
+```
 
 `build.*` はビルド時だけに使われ、クライアントへは配信されない。
 `_` で始まるキーはどのデータファイルでもコメント扱いで無視される。
@@ -127,6 +140,7 @@ cartridges/<id>/
     {
       "id": 163242799,
       "type": "single",                       // single（既定）| multi
+      "section": "single",                    // 任意。sections のコード（→ セクションの指定）
       "question": "問題文（プレーンテキスト）",
       "questionHtml": "<p>…</p>",             // 任意。あれば原文表示に優先使用
       "media": [                              // 任意。問題文に添えるメディア
@@ -147,8 +161,19 @@ cartridges/<id>/
 }
 ```
 
+**セクションの指定**：各問題がどのセクションに属するかは、次の優先順位で決まる。
+
+1. `build.labels` のラベルファイルに問題IDの記載がある → そのセクション
+2. 問題自身の `section` が `sections` に存在するコード → そのセクション
+3. `build.keywords` による重み付きキーワード分類
+4. すべて0点 → `build.fallbackSection`
+
+問題ファイルに `section` を直接書いておくのが最も確実で、ラベルファイルもキーワードも不要になる
+（同梱のサンプル試験はこの方式）。`sections` に無いコードを書くと無視され、3へ落ちる。
+
 訳文は `build.translations` 経由でビルド時に `question_ja` / `choices[].text_ja` /
 `explanation_ja` として合成される（原文は保持される）。
+選択肢の訳は、元の選択肢と要素数が一致するときだけ適用される。
 
 **メディア**：`media` / `choices[].media` / `explanationMedia` に `image` / `audio` / `video`
 を指定できる。`src`（と動画の `poster`）は**カートリッジ内の相対パスのみ**で、
