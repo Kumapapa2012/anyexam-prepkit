@@ -12,6 +12,9 @@ cartridges/    … 試験ごとのカートリッジ（1試験＝1ディレク�
 同梱の[サンプル試験](cartridges/sample-exam/README.md)をそのまま動かして、どんなことができるか
 確かめられる。自分の試験に合わせるときは `cartridges/` に新しいディレクトリを1つ足すだけでよい。
 
+> 🚀 **触ってみる → [サンプル試験のデモ](https://sample-exam-fi6t4ooshq-an.a.run.app/)**
+> — 登録不要、「デモ開始」ボタン1つで 60 問の練習を始められる（お試し用なので成績は残らない）。
+>
 > 🎓 **アプリを使って勉強する人向け → [ユーザーガイド](https://kumapapa2012.github.io/anyexam-prepkit/user_guide/index.html)**
 > — 画面写真つきで、登録から毎日の練習の組み立て方まで。
 >
