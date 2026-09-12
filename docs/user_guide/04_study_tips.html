@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="void" data-mode="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>04. おすすめの学習方法 — anyexam-prepkit ユーザーガイド</title>
+  <meta name="description" content="試験日から逆算した練習の組み立て方、本番比率と間違え優先の使い分け、成績リセットの使いどころ、問題の見直し。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <header class="page-header">
+    <div class="brand">
+      <a href="./index.html">
+        <span class="logo">AP</span>
+        <span>anyexam-prepkit</span>
+      </a>
+      <span class="badge">User Guide</span>
+      <span class="page-title">おすすめの学習方法</span>
+    </div>
+    <nav class="header-nav">
+      <a href="./index.html">ホーム</a>
+      <button class="mode-btn" data-mode-toggle type="button">☀ Light</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">本章の内容</p>
+        <ul class="sidebar-list" id="toc">
+          <li><a href="#overview"><span class="sn">—</span>概要</a></li>
+          <li><a href="#everyday"><span class="sn">1</span>毎日欠かさず練習する</a></li>
+          <li><a href="#choose"><span class="sn">2</span>本番比率と間違え優先</a></li>
+          <li><a href="#reset"><span class="sn">3</span>一周したらリセット</a></li>
+          <li><a href="#maintain"><span class="sn">4</span>問題を定期的に見直す</a></li>
+          <li><a href="#summary"><span class="sn">5</span>まとめ</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">他の章</p>
+        <div class="sidebar-chapters">
+          <a href="./01_what_you_can_do.html"><span class="cn">01</span>このアプリでできること</a>
+          <a href="./02_sign_up.html"><span class="cn">02</span>ユーザーの登録</a>
+          <a href="./03_getting_started.html"><span class="cn">03</span>学習の開始</a>
+        </div>
+      </div>
+    </aside>
+
+    <article class="content">
+
+      <!-- ── OVERVIEW ── -->
+      <section id="overview">
+        <div style="position:relative; overflow:hidden; margin-bottom:40px;">
+          <div class="chapter-bg-num">04</div>
+          <div class="chapter-eyebrow">Chapter 04</div>
+          <h1>おすすめの学習方法</h1>
+          <p class="lead">機能の説明ではなく、使い方の話です。どう組み立てれば試験当日にいちばん高いところに立てるか、3 つの柱にまとめました。</p>
+        </div>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">📅</span>
+            <span class="ft">毎日欠かさず練習する</span>
+            <span class="fd">試験の 1 週間前まで、1 日も空けずに続ける。出題タイプは目的に応じて使い分ける。</span>
+          </div>
+          <div>
+            <span class="fi">🔄</span>
+            <span class="ft">一周したら成績をリセットする</span>
+            <span class="fd">全問に手を付け終えたら記録を消して測り直す。そこで出る正答率が、本当の定着度。</span>
+          </div>
+          <div>
+            <span class="fi">🧹</span>
+            <span class="ft">問題そのものを定期的に見直す</span>
+            <span class="fd">シラバスが変われば練習問題も変える。古い問題を解き続けても点は伸びない。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── EVERYDAY ── -->
+      <section id="everyday">
+        <h2><span class="h2-num">1</span>試験の 1 週間前まで、毎日欠かさず練習する</h2>
+
+        <p>このアプリでいちばん効くのは、<strong>1 日も空けないこと</strong>です。1 回にたくさん解くより、少しでいいから毎日触るほうが残ります。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">ストリークを「途切れさせない」を目標にする</span>
+            <p>点数を目標にすると、調子の悪い日に開きたくなくなります。<strong>🔥 の数字を絶やさないこと</strong>を目標にしてください。忙しい日は通常セッションを 1 回、数問だけ解けば途切れません。「今日はもう無理」という日ほど、これが効きます。</p>
+          </div>
+        </div>
+
+        <h3>なぜ「1 週間前まで」なのか</h3>
+
+        <p>直前の 1 週間は、新しいことを詰め込む時期ではなく<strong>取りこぼしを回収する時期</strong>だからです。この時期になったら練習の中身を切り替えます。</p>
+
+        <table>
+          <thead>
+            <tr><th>時期</th><th>やること</th><th>選ぶモード</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>〜 2 週間前</strong></td>
+              <td>問題プールを一周する。知らない問題をなくす</td>
+              <td>間違え優先 ＋ 通常</td>
+            </tr>
+            <tr>
+              <td><strong>2 週間前 〜 1 週間前</strong></td>
+              <td>実力を測りながら弱点を潰す</td>
+              <td>本番比率 ＋ 通常／週末に本番モード</td>
+            </tr>
+            <tr>
+              <td><strong>1 週間前 〜 前日</strong></td>
+              <td>苦手だけを回収する。新しいことはしない</td>
+              <td>間違え優先 ＋ 通常</td>
+            </tr>
+            <tr>
+              <td><strong>前日</strong></td>
+              <td>軽く 1 セッションだけ。早く寝る</td>
+              <td>本番比率 ＋ 通常</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">直前に本番モードを詰め込まない</span>
+            <p>直前に低い点を見ると、自信を失うだけで得るものがありません。本番モードは<strong>1 週間前までに</strong>、時間の感覚を掴む目的で数回やれば十分です。</p>
+          </div>
+        </div>
+
+        <h3>1 回分の型</h3>
+
+        <p>毎日やることを決めておくと迷いません。おすすめはこれです。</p>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <strong>通常セッションを 1 回まわす</strong>
+              <p>その日の目的に合った出題タイプを選ぶ。数分で終わります。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <strong>間違えたら必ず「復習する」まで進める</strong>
+              <p>全問正解するまで再出題されます。ここを飛ばすと、同じ間違いを翌日も繰り返します。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <strong>結果画面のセクション別内訳を見る</strong>
+              <p>同じ分野が続けて低いなら、そこが本当の弱点です。教材に戻るべき場所が分かります。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div class="step-body">
+              <strong>🔥 が 1 日伸びたことを確認して閉じる</strong>
+              <p>これで今日のノルマは達成です。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ── CHOOSE ── -->
+      <section id="choose">
+        <h2><span class="h2-num">2</span>本番比率と間違え優先の使い分け方</h2>
+
+        <p>毎日の練習で迷うのは、この 2 つの選択です。役割がはっきり違います。</p>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">⚖️</span>
+            <span class="ft">本番比率 — 実力を「測る」ためのモード</span>
+            <span class="fd">本試験と同じセクション比率で出題されるので、出た正答率が<strong>そのまま本番の見込み点</strong>に近くなります。得意も苦手も混ざって出ます。</span>
+          </div>
+          <div>
+            <span class="fi">🎯</span>
+            <span class="ft">間違え優先 — 弱点を「潰す」ためのモード</span>
+            <span class="fd">間違えた問題・まだ解いていない問題から優先的に出ます。正答率は当然下がりますが、<strong>それが目的です</strong>。苦手ばかりを引くので、数字は気にしないでください。</span>
+          </div>
+        </div>
+
+        <figure class="shot">
+          <img src="./assets/img/mode-select.png" alt="モード選択画面" loading="lazy" />
+          <figcaption>図 2.1 — 目的に応じて上段を選び分ける</figcaption>
+        </figure>
+
+        <h3>使い分けの目安</h3>
+
+        <table>
+          <thead>
+            <tr><th>こんなとき</th><th>選ぶ</th><th>理由</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>始めたばかりで、まだ解いていない問題が多い</td>
+              <td>🎯 間違え優先</td>
+              <td>未挑戦の問題が最優先で出るので、プールを一周するのが早い</td>
+            </tr>
+            <tr>
+              <td>いまの実力を知りたい</td>
+              <td>⚖️ 本番比率</td>
+              <td>本番の構成で測らないと見込み点が分からない</td>
+            </tr>
+            <tr>
+              <td>特定の分野が弱いと分かっている</td>
+              <td>🎯 間違え優先</td>
+              <td>誤答の多い問題が上位に来る</td>
+            </tr>
+            <tr>
+              <td>点が伸びたか確かめたい</td>
+              <td>⚖️ 本番比率</td>
+              <td>前回と同じ条件でないと比較にならない</td>
+            </tr>
+            <tr>
+              <td>試験の 1 週間前</td>
+              <td>🎯 間違え優先</td>
+              <td>この時期は取りこぼしの回収に専念する</td>
+            </tr>
+            <tr>
+              <td>何も考えたくない</td>
+              <td>🎲 ランダム</td>
+              <td>続けることのほうが大事。迷って開かないのが最悪</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">週の組み立て例</span>
+            <p><strong>平日は間違え優先で潰し、週末に本番比率で測る。</strong>これを 1 サイクルにすると、「潰す → 測る → また潰す」がきれいに回ります。週末の数字が上がっていれば、平日のやり方が合っているということです。</p>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">間違え優先ばかりだと実力が見えなくなります</span>
+            <p>苦手だけを引き続けるので、正答率は上がりにくいままです。「伸びていない」と錯覚して落ち込みやすいので、<strong>定期的に本番比率を挟んで測り直してください。</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RESET ── -->
+      <section id="reset">
+        <h2><span class="h2-num">3</span>一周したら成績をリセットする</h2>
+
+        <p>成績画面の<strong>「挑戦した問題」</strong>が、問題プールの総数に届いたときが節目です。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/stats-full.png" alt="全問に挑戦し終えた成績画面" loading="lazy" />
+          <figcaption>図 3.1 — 60 / 60。全問に一度は手を付けた状態</figcaption>
+        </figure>
+
+        <h3>なぜリセットするのか</h3>
+
+        <p>一周し終えた時点の通算正答率には、<strong>まだ何も知らなかった頃の誤答が全部混ざっています。</strong>上の例の 81% は「これまでの平均」であって、「いまの実力」ではありません。</p>
+
+        <p>しかも、のべ回答数が増えるほど 1 回の正解が全体を動かさなくなります。勉強して実力が上がっても、数字はなかなか動きません。これでは伸びが見えません。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">リセットして測り直すと、定着度が出る</span>
+            <p>記録を消してからもう一周すると、そこで出る正答率は<strong>「いまの自分が、全問を解いたときの点数」</strong>になります。過去の誤答に薄められていない、そのままの実力です。一周目が 81%、リセット後の二周目が 92% なら、11 ポイント分が身に付いたということです。</p>
+          </div>
+        </div>
+
+        <h3>リセットのしかた</h3>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <strong>ホーム →「成績を見る」</strong>
+              <p>「挑戦した問題」が全問数に届いているか確認します。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <strong>いまの数字を控えておく</strong>
+              <p>通算正答率とセクション別正答率をメモするか、画面を撮っておきます。<strong>比較する相手がないとリセットの意味が半減します。</strong></p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <strong>画面下の「この成績をリセット」を押す</strong>
+              <p>「『○○』の成績をリセットしますか？」と確認が出ます。OK を押すと実行されます。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">リセットは取り消せません</span>
+            <p>消えるのは<strong>問題ごとの記録</strong>と<strong>学習した日の記録</strong>の両方です。つまり<strong>ストリークもゼロに戻ります。</strong>アカウント自体は残るので、ログインし直す必要はありません。<br />
+            🔥 の数字を大事にしている場合は、リセットするかどうかをよく考えてください。数字を守りたいなら、リセットせずに<strong>セクション別正答率の推移</strong>で伸びを見るという手もあります。</p>
+          </div>
+        </div>
+
+        <h3>リセット後にすること</h3>
+
+        <p>記録が消えた直後は、<strong>全問が「未挑戦」扱い</strong>になります。したがって「間違え優先」は、実質ランダムに近い挙動で全問を順に出していきます。</p>
+
+        <p>二周目は<strong>本番比率</strong>で回すのがおすすめです。実力を測り直すことが目的なので、本番の構成で解いたほうが意味のある数字になります。</p>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">リセットするタイミングの目安</span>
+            <p>「挑戦した問題」が全問数に届いたとき。それ以外では、<strong>試験勉強を始め直すとき</strong>（前回の受験から間が空いた、別の回を受け直す）も切り替えどきです。逆に、まだ一周していないうちにリセットしても、失うものがあるだけで得るものはありません。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MAINTAIN ── -->
+      <section id="maintain">
+        <h2><span class="h2-num">4</span>問題を定期的に見直す</h2>
+
+        <p>ここまでは解く側の話でした。最後は<strong>問題そのもの</strong>の話です。</p>
+
+        <p>資格試験は、シラバス（出題範囲）が改定されます。範囲が増えることも、丸ごと削られることもあります。そうなると、いま入っている練習問題は実態とずれます。</p>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">古い問題を解き続けても点は伸びません</span>
+            <p>むしろ害になります。<strong>出題されない範囲に時間を使う</strong>ことになり、<strong>新しく追加された範囲は練習しないまま</strong>本番を迎えることになるからです。セクションの比率が変わっていれば、「本番比率」で出る正答率も当てになりません。</p>
+          </div>
+        </div>
+
+        <h3>見直しが必要なサイン</h3>
+
+        <ul>
+          <li>試験の主催団体がシラバスの改定を告知した</li>
+          <li>出題範囲にセクションが追加された、または削除された</li>
+          <li>セクションごとの出題数の配分が変わった</li>
+          <li>解いていて「これはもう出ない」と感じる問題が増えてきた</li>
+          <li>公式教材や参考書が改訂された</li>
+        </ul>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">問題の追加・削除は管理者に依頼してください</span>
+            <p>問題を足したり消したり、セクションの比率を変えたりする画面は、このアプリには<strong>用意されていません</strong>。いずれもアプリを用意した人（管理者）の作業になります。気づいたことがあれば伝えてください。</p>
+          </div>
+        </div>
+
+        <p>管理者に連絡するときは、次を具体的に伝えると作業が早く済みます。</p>
+
+        <table>
+          <thead>
+            <tr><th>伝えること</th><th>例</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>何が変わったか</td><td>「○年○月の改定で、第 4 章が出題範囲から外れました」</td></tr>
+            <tr><td>どの問題が該当するか</td><td>「『○○問題』のセクションが丸ごと不要です」</td></tr>
+            <tr><td>出典</td><td>主催団体の告知ページの URL、改訂版教材の名前</td></tr>
+            <tr><td>追加が必要な範囲</td><td>「新しく○○が追加されたので、問題を足してほしい」</td></tr>
+          </tbody>
+        </table>
+
+        <p>間違いを見つけたときも同じです。<strong>正解が間違っている、解説がおかしい、図が表示されない</strong>——そういうものを見つけたら、問題文の書き出しを添えて管理者に伝えてください。自分が損をしないためでもあり、同じ問題を解く他の人のためにもなります。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">問題を差し替えたあとは</span>
+            <p>問題の追加・削除があると、ホーム画面の「問題バンク：全 N 問」の数字が変わります。プールの中身が大きく変わったときは、<strong>成績をリセットして測り直す</strong>のが素直です。古い問題の正誤記録が混ざったままでは、正答率が実態を表さなくなるからです。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SUMMARY ── -->
+      <section id="summary">
+        <h2><span class="h2-num">5</span>まとめ</h2>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <strong>1 日も空けない</strong>
+              <p>点数ではなく 🔥 を目標にする。忙しい日は数問だけでいい。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <strong>潰すなら間違え優先、測るなら本番比率</strong>
+              <p>平日は潰す、週末は測る。間違え優先だけに偏らない。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <strong>間違えたら必ず復習ループまで進める</strong>
+              <p>全問正解して閉じる。ここを飛ばすと積み上がらない。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div class="step-body">
+              <strong>一周したら数字を控えてリセット</strong>
+              <p>二周目の正答率が、本当の定着度。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">5</span>
+            <div class="step-body">
+              <strong>試験範囲が変わったら管理者に伝える</strong>
+              <p>問題が古いままでは、どれだけ解いても点は伸びない。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">6</span>
+            <div class="step-body">
+              <strong>1 週間前からは回収だけ</strong>
+              <p>新しいことはしない。前日は軽く 1 回やって早く寝る。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">健闘を祈ります</span>
+            <p>毎日数分の積み上げは、試験当日にちゃんと効きます。🔥 を絶やさずに。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pager">
+        <a href="./03_getting_started.html">
+          <span class="pager-label">Prev</span>
+          <span class="pager-title">← 03. 学習の開始</span>
+        </a>
+        <a class="next" href="./index.html">
+          <span class="pager-label">Index</span>
+          <span class="pager-title">ガイドのホーム →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+</body>
+</html>

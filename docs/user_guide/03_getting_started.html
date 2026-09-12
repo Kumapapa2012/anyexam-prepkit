@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="void" data-mode="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>03. 学習の開始 — anyexam-prepkit ユーザーガイド</title>
+  <meta name="description" content="アプリへのアクセスから試験の開始、解答、採点、間違え見直し、ストリーク、途中でやめる方法までの通し手順。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <header class="page-header">
+    <div class="brand">
+      <a href="./index.html">
+        <span class="logo">AP</span>
+        <span>anyexam-prepkit</span>
+      </a>
+      <span class="badge">User Guide</span>
+      <span class="page-title">学習の開始</span>
+    </div>
+    <nav class="header-nav">
+      <a href="./index.html">ホーム</a>
+      <button class="mode-btn" data-mode-toggle type="button">☀ Light</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">本章の内容</p>
+        <ul class="sidebar-list" id="toc">
+          <li><a href="#overview"><span class="sn">—</span>概要</a></li>
+          <li><a href="#access"><span class="sn">1</span>アプリを開く</a></li>
+          <li><a href="#start"><span class="sn">2</span>試験を始める</a></li>
+          <li><a href="#answer-normal"><span class="sn">3</span>通常セッションを解く</a></li>
+          <li><a href="#answer-exam"><span class="sn">4</span>本番モードを解く</a></li>
+          <li><a href="#result"><span class="sn">5</span>成績の見方</a></li>
+          <li><a href="#review"><span class="sn">6</span>終了と間違え見直し</a></li>
+          <li><a href="#streak"><span class="sn">7</span>ストリーク</a></li>
+          <li><a href="#quit"><span class="sn">8</span>途中でやめる</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">他の章</p>
+        <div class="sidebar-chapters">
+          <a href="./01_what_you_can_do.html"><span class="cn">01</span>このアプリでできること</a>
+          <a href="./02_sign_up.html"><span class="cn">02</span>ユーザーの登録</a>
+          <a href="./04_study_tips.html"><span class="cn">04</span>おすすめの学習方法</a>
+        </div>
+      </div>
+    </aside>
+
+    <article class="content">
+
+      <!-- ── OVERVIEW ── -->
+      <section id="overview">
+        <div style="position:relative; overflow:hidden; margin-bottom:40px;">
+          <div class="chapter-bg-num">03</div>
+          <div class="chapter-eyebrow">Chapter 03</div>
+          <h1>学習の開始</h1>
+          <p class="lead">アプリを開いてから、問題を解き、成績を見て、間違えたところを潰して終わるまで。1 回分の学習をひと通り追いかけます。</p>
+        </div>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">この章のゴール</span>
+            <p>「アプリを開く → 何問か解く → 間違えたところを潰す → ストリークが 1 日伸びる」を、迷わず自分で回せるようになること。慣れれば 5 分で終わります。</p>
+          </div>
+        </div>
+
+        <p class="note-inline">画面写真は同梱のサンプル試験のものです。1 セッションの問題数、本番モードの問題数と制限時間、合格ラインは試験ごとに違います。</p>
+      </section>
+
+      <!-- ── ACCESS ── -->
+      <section id="access">
+        <h2><span class="h2-num">1</span>アプリを開く</h2>
+
+        <p>アプリを用意した人から渡された URL を、スマホか PC のブラウザで開きます。インストールは要りません。</p>
+
+        <p>開いたらログインします。初めてなら先に
+        <a href="./02_sign_up.html">02. ユーザーの登録</a> を済ませてください。</p>
+
+        <h3>ホーム画面に追加しておく（おすすめ）</h3>
+
+        <p>毎日使うものなので、ホーム画面に置いておくと起動が一気に楽になります。ブラウザの共有メニューから<strong>「ホーム画面に追加」</strong>を選ぶだけです。</p>
+
+        <ul>
+          <li><strong>iPhone（Safari）</strong> — 共有ボタン → 「ホーム画面に追加」</li>
+          <li><strong>Android（Chrome）</strong> — 右上のメニュー → 「ホーム画面に追加」／「アプリをインストール」</li>
+        </ul>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">追加するとオフラインでも解けます</span>
+            <p>一度開いておけば、問題文も図も音声も端末側に取り込まれます。電車の中でも、機内でも問題を解けます。ただし<strong>オフラインで解いた分は成績に記録されません</strong>。記録を残したいときは通信できる状態で解いてください。</p>
+          </div>
+        </div>
+
+        <h3>ホーム画面で見るもの</h3>
+
+        <figure class="shot">
+          <img src="./assets/img/home.png" alt="ホーム画面" loading="lazy" />
+          <figcaption>図 1.1 — ホーム画面</figcaption>
+        </figure>
+
+        <table>
+          <thead>
+            <tr><th>表示</th><th>意味</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>こんにちは、○○ さん</td><td>いまログインしている人。共有端末なら始める前に確認</td></tr>
+            <tr><td>🔥 連続 N 日</td><td>途切れずに続いている日数。淡い色で「（今日もやろう！）」なら今日はまだ未達成</td></tr>
+            <tr><td>学習をはじめる</td><td>問題を解く。ここから始める</td></tr>
+            <tr><td>成績を見る</td><td>通算の成績を確認する</td></tr>
+            <tr><td>問題バンク：全 N 問</td><td>この試験に入っている問題の総数</td></tr>
+            <tr><td>🌐 ボタン</td><td>原文と訳文の切り替え（訳文がある試験のみ）</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── START ── -->
+      <section id="start">
+        <h2><span class="h2-num">2</span>試験を始める</h2>
+
+        <p><strong>「学習をはじめる」</strong>を押すと、モード選択の画面になります。<strong>出題タイプ</strong>と<strong>セッション</strong>を 1 つずつ選ぶと「スタート」が押せるようになります。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/mode-select.png" alt="モード選択画面" loading="lazy" />
+          <figcaption>図 2.1 — 上下で 1 つずつ選ぶ。両方選ぶまでスタートは押せない</figcaption>
+        </figure>
+
+        <p>それぞれの中身は
+        <a href="./01_what_you_can_do.html#modes">01 章</a>
+        で説明しています。迷ったときの選び方はこうです。</p>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">🚀</span>
+            <span class="ft">はじめての 1 回なら</span>
+            <span class="fd"><strong>ランダム</strong> ＋ <strong>通常</strong>。まずどんな問題が出るのかを見るのが目的なので、これで十分です。</span>
+          </div>
+          <div>
+            <span class="fi">📅</span>
+            <span class="ft">毎日の練習なら</span>
+            <span class="fd"><strong>本番比率</strong>か<strong>間違え優先</strong> ＋ <strong>通常</strong>。使い分けは <a href="./04_study_tips.html">04 章</a> で詳しく扱います。</span>
+          </div>
+          <div>
+            <span class="fi">⏰</span>
+            <span class="ft">時間を測って力試しなら</span>
+            <span class="fd"><strong>本番モード</strong>。出題タイプは自動的に本番比率になります。まとまった時間が取れる日に。</span>
+          </div>
+        </div>
+
+        <p>「スタート」を押すと、いきなり 1 問目が出ます。</p>
+      </section>
+
+      <!-- ── ANSWER NORMAL ── -->
+      <section id="answer-normal">
+        <h2><span class="h2-num">3</span>通常セッションを解く</h2>
+
+        <p>通常セッションは<strong>1 問ずつ、その場で採点</strong>されます。画面上部のバーが進み具合、右上の「1 / 10」が何問目かです。</p>
+
+        <h3>選択肢を選んで「回答する」</h3>
+
+        <p>単一選択なら 1 つ選ぶと「回答する」が押せます。複数選択の問題には水色の帯で<strong>「複数選択：当てはまるものをすべて選んでください」</strong>と出ます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/quiz-multi.png" alt="複数選択の問題" loading="lazy" />
+          <figcaption>図 3.1 — 複数選択。タップで選択・解除を切り替えられる</figcaption>
+        </figure>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">複数選択は完全一致でしか正解になりません</span>
+            <p>正解が 3 つある問題で 2 つしか選ばなければ誤答です。余計に選んでも誤答です。問題文の「（3つ）」のような指定を必ず読んでください。</p>
+          </div>
+        </div>
+
+        <h3>その場で正誤と解説を読む</h3>
+
+        <p>「回答する」を押すと、すぐに答え合わせが始まります。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/quiz-correct.png" alt="回答直後のフィードバック" loading="lazy" />
+          <figcaption>図 3.2 — 正解の選択肢が緑になり、解説が開ける</figcaption>
+        </figure>
+
+        <table>
+          <thead>
+            <tr><th>見え方</th><th>意味</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>緑の枠</td><td>正解の選択肢</td></tr>
+            <tr><td>赤の枠</td><td>自分が選んだ誤答</td></tr>
+            <tr><td>「選び漏れ」タグ</td><td>正解だったのに選ばなかった選択肢（複数選択のとき）</td></tr>
+            <tr><td>解説を見る ▾</td><td>押すと解説が開く。図や音声が付くこともある</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">正解した問題の解説も読んでください</span>
+            <p>まぐれ当たりを見逃さないためです。「なぜこれが正解か」を自分の言葉で言えないなら、まだ身に付いていません。</p>
+          </div>
+        </div>
+
+        <p>読み終えたら<strong>「次へ」</strong>で進みます。最後の問題の「次へ」で結果画面になります。</p>
+      </section>
+
+      <!-- ── ANSWER EXAM ── -->
+      <section id="answer-exam">
+        <h2><span class="h2-num">4</span>本番モードを解く</h2>
+
+        <p>本番モードは、本試験と同じ問題数・制限時間で通しで解きます。通常セッションと違うところが 3 つあります。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/exam-mode.png" alt="本番モードの出題画面" loading="lazy" />
+          <figcaption>図 4.1 — 右上に残り時間、問題番号の横に見直しフラグ</figcaption>
+        </figure>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">⏱️</span>
+            <span class="ft">タイマーが動く</span>
+            <span class="fd">残り時間が右上に出ます。残り 10 分を切ると色が変わって警告し、0 になると自動で採点されます（「時間切れ！お疲れさま」）。</span>
+          </div>
+          <div>
+            <span class="fi">🚩</span>
+            <span class="ft">見直しフラグが付けられる</span>
+            <span class="fd">迷った問題は右上のチェックを入れておきます。最後の解答一覧で目印になり、そこから戻って解き直せます。</span>
+          </div>
+          <div>
+            <span class="fi">🤫</span>
+            <span class="ft">その場では採点されない</span>
+            <span class="fd">「回答する」ではなく<strong>「次へ」</strong>で進みます。正誤も解説も、最後にまとめて採点したあとに見ます。</span>
+          </div>
+        </div>
+
+        <h3>解答一覧で見直す</h3>
+
+        <p>最後の問題の「次へ」を押すと、全問の解答一覧が出ます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/exam-list.png" alt="本番モードの解答一覧" loading="lazy" />
+          <figcaption>図 4.2 — 番号・選んだ記号・見直しフラグの一覧。番号を押すとその問題に戻れる</figcaption>
+        </figure>
+
+        <p>ここでフラグを付けた問題（黄色）を見直し、必要なら番号を押して戻って解き直します。納得したら<strong>「終了する」</strong>で採点です。</p>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">空欄のまま終了すると誤答になります</span>
+            <p>一覧で記号が入っていない番号は、まだ答えていない問題です。本試験でも同じことですが、迷っても必ず何か選んでから終了してください。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RESULT ── -->
+      <section id="result">
+        <h2><span class="h2-num">5</span>成績の見方</h2>
+
+        <p>解き終えると結果画面になります。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/result-exam.png" alt="本番モードの結果画面" loading="lazy" />
+          <figcaption>図 5.1 — 本番モード 30 問を解き終えた結果</figcaption>
+        </figure>
+
+        <p>上から順に、こう読みます。</p>
+
+        <table>
+          <thead>
+            <tr><th>表示</th><th>読み方</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>円グラフの中の %</td><td>このセッションの正答率</td></tr>
+            <tr><td>N 問中 M 問 正解</td><td>内訳。母数が小さいと % は振れるので、この数字も見る</td></tr>
+            <tr><td>合格ライン突破！🎊（60%）</td><td>合格ラインに届いた。カッコ内がその試験の合格ライン</td></tr>
+            <tr><td>あと X 問で合格ライン（60%）</td><td>届かなかった。あと何問正解すればよかったか</td></tr>
+            <tr><td>🔥 連続 N 日目！</td><td>今日のストリークが確定した</td></tr>
+            <tr><td>セクション別の内訳</td><td><strong>ここがいちばん大事。</strong>どの分野で落としたかが分かる</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">1 回の % に一喜一憂しない</span>
+            <p>10 問のセッションでは、1 問の当たり外れで 10% 動きます。その日の点数より、<strong>セクション別の内訳で同じ分野が続けて低い</strong>かどうかを見てください。そこが本当の弱点です。</p>
+          </div>
+        </div>
+
+        <p>なお、この結果画面の点数は<strong>閉じると残りません。</strong>残るのは問題ごとの通算だけで、ホームの「成績を見る」から確認します。詳しくは
+        <a href="./02_sign_up.html#progress">02 章の進行度の確認方法</a> を参照してください。</p>
+      </section>
+
+      <!-- ── REVIEW ── -->
+      <section id="review">
+        <h2><span class="h2-num">6</span>セッションの終了と間違え見直し</h2>
+
+        <p>結果画面に誤答があると、終わり方を選べます。<strong>ここで終わらせずに、間違いを潰してから閉じるのがこのアプリの本来の使い方です。</strong></p>
+
+        <h3>復習ループで潰す</h3>
+
+        <figure class="shot">
+          <img src="./assets/img/result.png" alt="復習するかを選ぶ結果画面" loading="lazy" />
+          <figcaption>図 6.1 — 誤答があると「復習する」が出る</figcaption>
+        </figure>
+
+        <p><strong>「復習する（間違えた問題に再挑戦）」</strong>を押すと、間違えた問題だけがもう一度出ます。右上に「復習1回目 1 / 3」のようにラウンド数が出ます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/remediation.png" alt="復習ラウンドの出題画面" loading="lazy" />
+          <figcaption>図 6.2 — 誤答のみが再出題される</figcaption>
+        </figure>
+
+        <p>ここでまた間違えた問題は、さらに次のラウンドに回ります。<strong>全問正解するまで終わりません。</strong>全部正解すると「復習コンプリート！🎉」になります。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">復習中の回答は成績に記録されません</span>
+            <p>通算正答率が下がることを気にせず、何周でも叩けます。答えを覚えてしまうことを心配する必要もありません。次に本番比率で出題されたとき、本当に解けるかどうかで確かめられます。</p>
+          </div>
+        </div>
+
+        <h3>間違え見直しで読み返す</h3>
+
+        <p>復習が終わったあと（または本番モードの結果画面から）<strong>「間違えた問題を復習」</strong>を押すと、そのセッションで間違えた問題が一覧で開きます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/review.png" alt="間違え見直し画面" loading="lazy" />
+          <figcaption>図 6.3 — 正解に ✓、選び漏らした正解に「✓（選び漏れ）」、自分の回答に「←あなたの回答」</figcaption>
+        </figure>
+
+        <p>問題文・全選択肢・解説が縦に並ぶので、<strong>どう間違えたのか</strong>をまとめて確認できます。復習ループが「手を動かして覚え直す」のに対して、こちらは「読んで整理する」ためのものです。</p>
+
+        <p>読み終えたら左上の <strong>‹</strong> で結果画面に戻り、<strong>「ホームへ」</strong>でセッションを閉じます。これで 1 回分が完了です。</p>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">「やめる」を選んだ場合</span>
+            <p>復習せずに閉じても、間違えた記録はちゃんと残ります。次に「間違え優先」で解けば、その問題が優先的に出てきます。時間がない日はそれで構いません。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STREAK ── -->
+      <section id="streak">
+        <h2><span class="h2-num">7</span>ストリーク（連続学習日数）</h2>
+
+        <p>セッションを<strong>最後まで解き切ると</strong>、その日が「達成」になります。達成した日が途切れずに続いている日数が、ストリークです。</p>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">✅</span>
+            <span class="ft">達成の条件</span>
+            <span class="fd">1 日に 1 回、セッションを最後の問題まで解き切ること。<strong>通常セッション 1 回（数問）でも条件を満たします。</strong>点数は問われません。</span>
+          </div>
+          <div>
+            <span class="fi">🗓️</span>
+            <span class="ft">日付の区切り</span>
+            <span class="fd">端末の時刻での「その日」です。日付が変わると次の 1 日になります。</span>
+          </div>
+          <div>
+            <span class="fi">🔥</span>
+            <span class="ft">どこに出るか</span>
+            <span class="fd">ホーム画面のバッジ、結果画面の「🔥 連続 N 日目！」、成績画面の「連続学習日数」の 3 か所。</span>
+          </div>
+          <div>
+            <span class="fi">🎉</span>
+            <span class="ft">応援メッセージ</span>
+            <span class="fd">節目の日数に届いたとき、その日の初達成時だけメッセージが出ます。</span>
+          </div>
+        </div>
+
+        <figure class="shot">
+          <img src="./assets/img/result-complete.png" alt="ストリークが表示された結果画面" loading="lazy" />
+          <figcaption>図 7.1 — 解き切ると結果画面にストリークが出る</figcaption>
+        </figure>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">ストリークが付かないケース</span>
+            <p>途中で中断したセッション（「記録せずにホームへ」も「途中結果を見る」も）では達成になりません。<strong>最後まで解き切ることが条件</strong>です。また復習ループを中断した場合も付きません。オフラインで解いた分も記録が届かないため付きません。</p>
+          </div>
+        </div>
+
+        <p>1 日に何回解いても、その日の達成は 1 回分です。数字を増やすには<strong>日をまたいで続ける</strong>しかありません。逆に言えば、忙しい日でも 1 回だけ回せば途切れません。</p>
+
+        <p class="note-inline">成績をリセットすると、学習した日の記録も消えるためストリークもゼロに戻ります。リセットの使いどころは <a href="./04_study_tips.html">04 章</a> で扱います。</p>
+      </section>
+
+      <!-- ── QUIT ── -->
+      <section id="quit">
+        <h2><span class="h2-num">8</span>途中でやめる</h2>
+
+        <p>急に時間がなくなったら、画面左上の <strong>✕</strong> を押します。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/quit-sheet.png" alt="セッション中断の確認" loading="lazy" />
+          <figcaption>図 8.1 — 中断の確認</figcaption>
+        </figure>
+
+        <table>
+          <thead>
+            <tr><th>選択</th><th>どうなるか</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>途中結果を見る</strong></td>
+              <td>そこまで解いた分で結果画面を出します。解いた分の記録は残りますが、<strong>ストリークは付きません</strong></td>
+            </tr>
+            <tr>
+              <td><strong>記録せずにホームへ</strong></td>
+              <td>そのセッションをなかったことにして抜けます</td>
+            </tr>
+            <tr>
+              <td><strong>続ける</strong></td>
+              <td>中断をやめて問題に戻ります</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">途中から再開する機能はありません</span>
+            <p>中断したセッションを後で続けることはできません。次に始めるときは新しいセッションになります。だからこそ、通常セッションは<strong>一度で終わる長さ</strong>に設定されています。時間が読めない日は本番モードを避け、通常セッションを選んでください。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pager">
+        <a href="./02_sign_up.html">
+          <span class="pager-label">Prev</span>
+          <span class="pager-title">← 02. ユーザーの登録</span>
+        </a>
+        <a class="next" href="./04_study_tips.html">
+          <span class="pager-label">Next</span>
+          <span class="pager-title">04. おすすめの学習方法 →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="void" data-mode="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02. ユーザーの登録 — anyexam-prepkit ユーザーガイド</title>
+  <meta name="description" content="ニックネームとパスワードでの登録手順、ユーザーごとに保存されるデータ、学習の進行度の確認方法、パスワードを忘れたときの対応。" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <div id="read-progress"></div>
+
+  <header class="page-header">
+    <div class="brand">
+      <a href="./index.html">
+        <span class="logo">AP</span>
+        <span>anyexam-prepkit</span>
+      </a>
+      <span class="badge">User Guide</span>
+      <span class="page-title">ユーザーの登録</span>
+    </div>
+    <nav class="header-nav">
+      <a href="./index.html">ホーム</a>
+      <button class="mode-btn" data-mode-toggle type="button">☀ Light</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">本章の内容</p>
+        <ul class="sidebar-list" id="toc">
+          <li><a href="#overview"><span class="sn">—</span>概要</a></li>
+          <li><a href="#register"><span class="sn">1</span>登録する</a></li>
+          <li><a href="#login"><span class="sn">2</span>2 回目以降のログイン</a></li>
+          <li><a href="#data"><span class="sn">3</span>管理されるデータ</a></li>
+          <li><a href="#progress"><span class="sn">4</span>進行度の確認方法</a></li>
+          <li><a href="#password"><span class="sn">5</span>パスワードを忘れたら</a></li>
+          <li><a href="#multi"><span class="sn">6</span>1 台を複数人で使う</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">他の章</p>
+        <div class="sidebar-chapters">
+          <a href="./01_what_you_can_do.html"><span class="cn">01</span>このアプリでできること</a>
+          <a href="./03_getting_started.html"><span class="cn">03</span>学習の開始</a>
+          <a href="./04_study_tips.html"><span class="cn">04</span>おすすめの学習方法</a>
+        </div>
+      </div>
+    </aside>
+
+    <article class="content">
+
+      <!-- ── OVERVIEW ── -->
+      <section id="overview">
+        <div style="position:relative; overflow:hidden; margin-bottom:40px;">
+          <div class="chapter-bg-num">02</div>
+          <div class="chapter-eyebrow">Chapter 02</div>
+          <h1>ユーザーの登録</h1>
+          <p class="lead">このアプリは、成績をユーザーごとに保存します。まずアカウントを 1 つ作るところから始めましょう。必要なのはニックネームとパスワードだけで、メールアドレスも本名も要りません。</p>
+        </div>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">なぜ登録が必要なのか</span>
+            <p>「どの問題を間違えたか」を覚えておくためです。この記録があるから、<strong>苦手な問題を優先して出題する</strong>ことも、<strong>正答率の伸びを追う</strong>こともできます。登録せずに使うことはできません。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── REGISTER ── -->
+      <section id="register">
+        <h2><span class="h2-num">1</span>登録する</h2>
+
+        <p>アプリを開くと、最初にこの画面が出ます。上のタブで<strong>「新規登録」</strong>を選んでください。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/login.png" alt="新規登録タブを選んだ状態の画面" loading="lazy" />
+          <figcaption>図 1.1 — 新規登録タブ</figcaption>
+        </figure>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <strong>ニックネーム（ユーザー名）を入れる</strong>
+              <p>24 文字まで。日本語も使えます。他の人が既に使っている名前は選べません。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <strong>パスワードを入れる</strong>
+              <p>6 文字以上。あとで自分で変更する画面は用意されていないので、<strong>覚えやすく、かつ忘れないもの</strong>にしてください。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-body">
+              <strong>招待コードを入れる（求められた場合だけ）</strong>
+              <p>誰でも登録できないように設定されている場合、アプリを用意した人から渡されたコードを入れます。何も渡されていなければ空のままで大丈夫です。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div class="step-body">
+              <strong>「登録してはじめる」を押す</strong>
+              <p>そのままログイン状態になり、ホーム画面に進みます。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">よく出るエラー</span>
+            <p><strong>「そのユーザー名は既に使われています」</strong> — 別の名前にしてください。<br />
+            <strong>「パスワードは 6 文字以上にしてください」</strong> — 短すぎます。<br />
+            <strong>「招待コードが正しくありません」</strong> — コードの写し間違いか、渡されたものが古い可能性があります。アプリを用意した人に確認してください。</p>
+          </div>
+        </div>
+
+        <p class="note-inline">公開デモとして動いているアプリでは、新規登録タブが出ずに「デモ開始」ボタン 1 つだけが出ることがあります。その場合はお試し用のアカウントが自動で作られ、成績は毎回まっさらな状態から始まります。</p>
+      </section>
+
+      <!-- ── LOGIN ── -->
+      <section id="login">
+        <h2><span class="h2-num">2</span>2 回目以降のログイン</h2>
+
+        <p>次からは<strong>「ログイン」</strong>タブに、登録したニックネームとパスワードを入れます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/login-tab.png" alt="ログインタブ" loading="lazy" />
+          <figcaption>図 2.1 — ログインタブ。招待コードの欄は出ない</figcaption>
+        </figure>
+
+        <p>一度ログインすれば<strong>約 30 日はログインしたまま</strong>になります。毎回入力する必要はありません。ただし次の場合はログインし直しになります。</p>
+
+        <ul>
+          <li>自分で「ログアウト」を押したとき</li>
+          <li>ブラウザの履歴・サイトデータを消したとき</li>
+          <li>別の端末や別のブラウザで開いたとき</li>
+          <li>プライベートモード（シークレットウィンドウ）で開いたとき</li>
+        </ul>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">成績は端末ではなくアカウントに紐づきます</span>
+            <p>スマホで解いた続きを PC で見る、といったことができます。同じニックネームとパスワードでログインすれば、どの端末からでも同じ成績が出ます。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DATA ── -->
+      <section id="data">
+        <h2><span class="h2-num">3</span>ユーザーで管理されるデータ</h2>
+
+        <p>アカウントに紐づいて保存されるのは、次の 3 種類だけです。</p>
+
+        <table>
+          <thead>
+            <tr><th>データ</th><th>中身</th><th>何に使われるか</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>アカウント情報</strong></td>
+              <td>ニックネームと、パスワード（そのままではなく、復元できない形に変換して保存）</td>
+              <td>ログインの確認</td>
+            </tr>
+            <tr>
+              <td><strong>問題ごとの記録</strong></td>
+              <td>その問題を何回解いたか / 何回正解したか / 何回間違えたか / 直近は正解だったか</td>
+              <td>「間違え優先」の出題順、通算正答率、セクション別正答率</td>
+            </tr>
+            <tr>
+              <td><strong>学習した日</strong></td>
+              <td>セッションを解き切った日付の一覧</td>
+              <td>連続学習日数（ストリーク）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>逆に、<strong>保存されないもの</strong>もはっきりしています。</p>
+
+        <ul>
+          <li>メールアドレス・本名・電話番号といった個人情報（そもそも入力欄がありません）</li>
+          <li>1 回 1 回のセッションの履歴（「何月何日に何点だった」という記録は残りません）</li>
+          <li>どの選択肢を選んだか（正誤の回数だけが積算されます）</li>
+        </ul>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">セッションの点数は残らない</span>
+            <p>結果画面に出る「10 問中 7 問正解」は、そのセッションを閉じると消えます。残るのは<strong>問題ごとの通算</strong>だけです。日々の点数を記録したい場合は、自分でメモを取ってください。</p>
+          </div>
+        </div>
+
+        <p class="note-inline">オフライン（機内モードなど）でも問題は解けますが、その結果はサーバーに届かないため記録されません。成績を残したいときは通信できる状態で解いてください。</p>
+      </section>
+
+      <!-- ── PROGRESS ── -->
+      <section id="progress">
+        <h2><span class="h2-num">4</span>学習の進行度の確認方法</h2>
+
+        <p>ホーム画面の<strong>「成績を見る」</strong>を押すと、いまどこまで進んでいるかが見られます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/stats.png" alt="成績画面" loading="lazy" />
+          <figcaption>図 4.1 — 成績画面。始めたばかりの状態</figcaption>
+        </figure>
+
+        <p>進行度を測るうえで、特に見るべき数字は 2 つです。</p>
+
+        <div class="feature-list">
+          <div>
+            <span class="fi">📚</span>
+            <span class="ft">挑戦した問題 — 何問に手を付けたか</span>
+            <span class="fd">「10 / 60」なら、60 問のうち 10 問はもう一度は解いた、という意味。まず<strong>この分母に追いつくこと</strong>が最初の目標になります。まだ触っていない問題が残っているうちは、正答率はあまり信用できません。</span>
+          </div>
+          <div>
+            <span class="fi">📈</span>
+            <span class="ft">通算正答率 — どれだけ身に付いたか</span>
+            <span class="fd">これまでの全回答のうち正解だった割合。全問に一度触れたあとは、この数字を伸ばしていく段階になります。</span>
+          </div>
+        </div>
+
+        <p>さらに下の<strong>セクション別 正答率</strong>を見れば、分野ごとの得意・不得意が分かります。一覧の中で目立って低いものが、次に手を入れるべきところです。</p>
+
+        <div class="callout callout-ok">
+          <span class="callout-icon">✦</span>
+          <div class="callout-body">
+            <span class="callout-title">「挑戦した問題」が全問に届いたら</span>
+            <p>問題プールを一周し終えた合図です。ここで成績をリセットして正答率を測り直すと、知識がどれだけ定着したかが正直に出ます。やり方と狙いは
+            <a href="./04_study_tips.html">04. おすすめの学習方法</a> で扱います。</p>
+          </div>
+        </div>
+
+        <p>ホーム画面にも進行度の手がかりが 2 つ出ています。<strong>🔥 連続 N 日</strong>のバッジと、画面下の<strong>「問題バンク：全 N 問」</strong>です。後者は、その試験に入っている問題の総数です。</p>
+      </section>
+
+      <!-- ── PASSWORD ── -->
+      <section id="password">
+        <h2><span class="h2-num">5</span>パスワードを忘れたら</h2>
+
+        <p>ログインに失敗すると、このメッセージが出ます。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/login-error.png" alt="ログイン失敗のエラーメッセージ" loading="lazy" />
+          <figcaption>図 5.1 — ニックネームかパスワードのどちらかが違う</figcaption>
+        </figure>
+
+        <p>まず落ち着いて、次を確認してください。</p>
+
+        <ul>
+          <li>ニックネームの打ち間違い（全角・半角、英字の大文字・小文字も区別されます）</li>
+          <li>スマホの予測入力で余計な文字が入っていないか</li>
+          <li>パスワードの先頭や末尾に空白が入っていないか</li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <span class="callout-title">パスワードの変更・リセットの画面はありません</span>
+            <p>このアプリには、パスワードを自分で変更したり、「パスワードをお忘れですか？」からメールで再設定したりする機能が<strong>用意されていません</strong>。メールアドレスを預かっていないので、自動で送ることもできません。</p>
+          </div>
+        </div>
+
+        <p>どうしても思い出せない場合は、<strong>アプリを用意した人（管理者）に連絡してください。</strong>管理者はサーバー側でパスワードを再設定できます。連絡するときは次を伝えるとスムーズです。</p>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-body">
+              <strong>登録したニックネーム</strong>
+              <p>これが分からないと、どのアカウントか特定できません。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-body">
+              <strong>どうしたいか</strong>
+              <p>「パスワードを再設定してほしい」のか、「成績は捨てて作り直したい」のかを伝えてください。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="callout callout-note">
+          <span class="callout-icon">💡</span>
+          <div class="callout-body">
+            <span class="callout-title">新しく登録し直すという手もあります</span>
+            <p>管理者に頼むのが難しく、成績を捨ててもかまわないなら、別のニックネームで登録し直すのが手っ取り早いです。ただし<strong>それまでの記録はすべて失われます</strong>。ストリークもゼロからになります。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MULTI ── -->
+      <section id="multi">
+        <h2><span class="h2-num">6</span>1 台を複数人で使う</h2>
+
+        <p>家族や同僚と 1 台の端末を共有する場合は、<strong>人ごとにアカウントを作ってください。</strong>成績が混ざると「間違え優先」の出題がおかしくなり、正答率も意味をなさなくなります。</p>
+
+        <p>交代するときは、ホーム画面の<strong>「ログアウト」</strong>を押してから、次の人がログインします。ログイン後は名前が「こんにちは、○○ さん」と出るので、始める前にそこを確認する習慣をつけると安心です。</p>
+
+        <figure class="shot">
+          <img src="./assets/img/home.png" alt="ホーム画面の挨拶とログアウトボタン" loading="lazy" />
+          <figcaption>図 6.1 — 名前を確認してから始める</figcaption>
+        </figure>
+      </section>
+
+      <div class="pager">
+        <a href="./01_what_you_can_do.html">
+          <span class="pager-label">Prev</span>
+          <span class="pager-title">← 01. このアプリでできること</span>
+        </a>
+        <a class="next" href="./03_getting_started.html">
+          <span class="pager-label">Next</span>
+          <span class="pager-title">03. 学習の開始 →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+</body>
+</html>
