@@ -1,10 +1,12 @@
 # カートリッジ：サンプル試験
 
 フレームワークでできることをひととおり示すための見本カートリッジ。
-フレームワーク側の説明は[リポジトリルートの README](../../README.md) を参照。
+フレームワーク側の説明は[リポジトリルートの README](../../README.md) と
+[Wiki](https://github.com/Kumapapa2012/anyexam-prepkit/wiki) を参照。
 
 素材（画像・音声・動画）はすべて自作で、外部の著作物を含まない。
-自分の試験用カートリッジを作るときの雛形としてコピーして使える。
+自分の試験用カートリッジを作るときの雛形としてコピーして使える
+（→ [カートリッジ作成チュートリアル](https://github.com/Kumapapa2012/anyexam-prepkit/wiki/Cartridge-Tutorial)）。
 
 ## 試験要綱
 
