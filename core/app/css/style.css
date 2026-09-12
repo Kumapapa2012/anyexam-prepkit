@@ -108,6 +108,9 @@ button{font-family:inherit;cursor:pointer}
 .q-text{font-size:18px;line-height:1.6;font-weight:600;white-space:pre-wrap}
 .q-text p{margin:0 0 8px}
 .auth-note{margin:10px 2px 0;font-size:12px;line-height:1.6;color:var(--muted)}
+.guide-link{display:block;text-align:center;margin-top:12px;padding:6px;
+  font-size:13px;font-weight:700;color:var(--muted);text-decoration:none}
+.guide-link:hover{color:var(--green-d);text-decoration:underline}
 .multi-hint{margin:0;font-size:13px;font-weight:700;color:var(--blue);
   background:#e8f7ff;border-radius:10px;padding:8px 12px}
 

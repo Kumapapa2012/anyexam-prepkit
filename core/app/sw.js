@@ -1,7 +1,7 @@
 /* Service Worker：オフライン学習のためにアプリ一式をキャッシュ。
    方針＝ネットワーク優先（オンライン時は常に最新、失敗時のみキャッシュ）。
    /api/ はサーバー記録のため常にネットワーク直行（キャッシュしない）。 */
-const CACHE = 'quiz-v16';
+const CACHE = 'quiz-v17';
 const ASSETS = [
   './',
   './index.html',

@@ -773,9 +773,24 @@
     $('optExamLabel').textContent = `本番モード（${EXAM_N}問・${Math.round(EXAM_SEC / 60)}分）`;
   }
 
+  // 使い方ガイドへのリンク（ログイン画面・ホームの2か所）。
+  // APP_CONFIG.userGuide.url が空なら出さない。
+  function applyGuideLink() {
+    const g = CONFIG.userGuide || {};
+    if (!g.url) return;
+    ['guideLinkAuth', 'guideLinkHome'].forEach((id) => {
+      const a = $(id);
+      if (!a) return;
+      a.href = g.url;
+      a.textContent = g.label || '使い方ガイド';
+      a.classList.remove('hidden');
+    });
+  }
+
   async function boot() {
     bind();
     setAuthMode('login');
+    applyGuideLink();
     updateLangToggles();
     await initHome();
     if (!await startPendingQ()) show('home');

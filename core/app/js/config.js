@@ -1,5 +1,12 @@
 /* アプリ設定。表示メッセージ等はロジックにハードコードせずここに記載する。 */
 window.APP_CONFIG = {
+  // 使い方ガイドへのリンク。ログイン画面とホームに表示する。
+  // url を '' にするとリンク自体を出さない。自前のガイドがあれば差し替える。
+  userGuide: {
+    url: 'https://kumapapa2012.github.io/anyexam-prepkit/user_guide/index.html',
+    label: '📖 使い方ガイド',
+  },
+
   streak: {
     // マイルストーン: ストリークが at に一致、または every 指定時は at 以降 every の倍数のとき、
     // messages から1つをランダムに表示（その日初達成時のみ）。
